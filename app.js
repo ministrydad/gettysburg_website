@@ -5,6 +5,7 @@ const { useState, useEffect, useRef } = React;
 // Image paths - place your images in /images folder
 const IMAGES = {
   logo: "/images/logo.png",
+  lockIcon: "/images/lock_only.png",
   heist: "/images/heist.png",
   madhatter: "/images/madhatter.png",
   houdini: "/images/houdini.png",
@@ -73,8 +74,12 @@ function Navigation() {
            borderBottom: scrolled ? '1px solid rgba(255,255,255,0.1)' : 'none'
          }}>
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-        <a href="#" className="flex items-center gap-3 group">
-          <img src={IMAGES.logo} alt="Escape Gettysburg" className="h-16 md:h-20 w-auto transition-all group-hover:scale-105" />
+        <a href="#" className="flex items-center gap-4 group">
+          <img src={IMAGES.lockIcon} alt="Escape Gettysburg" className="h-14 md:h-16 w-auto transition-all group-hover:scale-105" />
+          <div className="flex flex-col">
+            <span className="font-display text-2xl md:text-3xl text-white tracking-wider leading-none">ESCAPE</span>
+            <span className="font-display text-lg md:text-xl text-cyan-400 tracking-widest leading-none">GETTYSBURG</span>
+          </div>
         </a>
         
         <div className="hidden md:flex items-center gap-8">
@@ -283,7 +288,9 @@ function RoomCarousel() {
               <div 
                 className="relative rounded-3xl overflow-hidden"
                 style={{ 
-                  boxShadow: index === currentIndex ? '0 0 50px 5px rgba(14,165,233,0.4), 0 0 100px 10px rgba(14,165,233,0.2)' : '0 20px 40px rgba(0,0,0,0.5)'
+                  boxShadow: index === currentIndex ? '0 0 50px 5px rgba(14,165,233,0.4), 0 0 100px 10px rgba(14,165,233,0.2)' : '0 20px 40px rgba(0,0,0,0.5)',
+                  border: index === currentIndex ? '3px solid rgba(0,0,0,0.8)' : '3px solid rgba(0,0,0,0.6)',
+                  outline: index === currentIndex ? '2px solid rgba(14,165,233,0.5)' : 'none'
                 }}
               >
                 {/* Room background image */}
@@ -655,9 +662,13 @@ function Footer() {
     <footer className="py-12 px-6 border-t border-white/10" style={{ background: '#0A0A0B' }}>
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="flex items-center gap-3">
-            <img src={IMAGES.logo} alt="Escape Gettysburg" className="h-14 w-auto" />
-          </div>
+          <a href="#" className="flex items-center gap-3">
+            <img src={IMAGES.lockIcon} alt="Escape Gettysburg" className="h-12 w-auto" />
+            <div className="flex flex-col">
+              <span className="font-display text-xl text-white tracking-wider leading-none">ESCAPE</span>
+              <span className="font-display text-sm text-cyan-400 tracking-widest leading-none">GETTYSBURG</span>
+            </div>
+          </a>
           
           <div className="flex flex-wrap items-center justify-center gap-6 text-sm font-ui text-slate-500">
             <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
