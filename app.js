@@ -66,7 +66,7 @@ function Navigation() {
   }, []);
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'py-3' : 'py-4'}`}
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'py-2' : 'py-3'}`}
          style={{ 
            background: scrolled ? 'rgba(10,10,11,0.95)' : 'transparent',
            backdropFilter: scrolled ? 'blur(20px)' : 'none',
@@ -74,7 +74,7 @@ function Navigation() {
          }}>
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         <a href="#" className="flex items-center gap-3 group">
-          <img src={IMAGES.logo} alt="Escape Gettysburg" className="h-12 w-auto transition-all group-hover:scale-105" />
+          <img src={IMAGES.logo} alt="Escape Gettysburg" className="h-16 md:h-20 w-auto transition-all group-hover:scale-105" />
         </a>
         
         <div className="hidden md:flex items-center gap-8">
@@ -656,7 +656,7 @@ function Footer() {
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex items-center gap-3">
-            <img src={IMAGES.logo} alt="Escape Gettysburg" className="h-10 w-auto" />
+            <img src={IMAGES.logo} alt="Escape Gettysburg" className="h-14 w-auto" />
           </div>
           
           <div className="flex flex-wrap items-center justify-center gap-6 text-sm font-ui text-slate-500">
