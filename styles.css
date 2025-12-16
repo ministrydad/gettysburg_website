@@ -18,8 +18,8 @@ body {
 }
 
 @keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 30px rgba(14,165,233,0.4); }
-  50% { box-shadow: 0 0 50px rgba(14,165,233,0.7); }
+  0%, 100% { box-shadow: 0 0 30px rgba(0,160,226,0.4); }
+  50% { box-shadow: 0 0 50px rgba(0,160,226,0.7); }
 }
 
 @keyframes grain {
@@ -119,9 +119,15 @@ body {
   mix-blend-mode: overlay;
 }
 
+/* Brand color utilities */
+.text-brand-blue { color: #00a0e2; }
+.text-brand-blue-dark { color: #3684bf; }
+.text-brand-blue-deep { color: #283891; }
+.bg-brand-blue { background-color: #00a0e2; }
+
 /* Gradient text effect */
 .gradient-text {
-  background: linear-gradient(90deg, #0EA5E9, #22D3EE);
+  background: linear-gradient(90deg, #3684bf, #00a0e2);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -129,8 +135,8 @@ body {
 
 /* Hero section background */
 .hero-gradient {
-  background: radial-gradient(ellipse at center top, rgba(14,165,233,0.15) 0%, transparent 60%),
-              radial-gradient(ellipse at right, rgba(139,92,246,0.1) 0%, transparent 50%),
+  background: radial-gradient(ellipse at center top, rgba(0,160,226,0.15) 0%, transparent 60%),
+              radial-gradient(ellipse at right, rgba(40,56,145,0.1) 0%, transparent 50%),
               linear-gradient(180deg, #0A0A0B 0%, #0F172A 100%);
 }
 

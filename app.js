@@ -78,7 +78,7 @@ function Navigation() {
           <img src={IMAGES.lockIcon} alt="Escape Gettysburg" className="h-14 md:h-16 w-auto transition-all group-hover:scale-105" />
           <div className="flex flex-col">
             <span className="font-display text-2xl md:text-3xl text-white tracking-wider leading-none">ESCAPE</span>
-            <span className="font-display text-lg md:text-xl text-cyan-400 tracking-widest leading-none">GETTYSBURG</span>
+            <span className="font-display text-lg md:text-xl text-brand-blue tracking-widest leading-none">GETTYSBURG</span>
           </div>
         </a>
         
@@ -86,11 +86,11 @@ function Navigation() {
           <a href="#rooms" className="font-body text-sm text-slate-300 hover:text-white transition-colors">Our Rooms</a>
           <a href="#about" className="font-body text-sm text-slate-300 hover:text-white transition-colors">How It Works</a>
           <a href="#contact" className="font-body text-sm text-slate-300 hover:text-white transition-colors">Contact</a>
-          <a href="tel:7177695397" className="font-body text-sm text-cyan-400 hover:text-cyan-300 transition-colors flex items-center gap-2">
+          <a href="tel:7177695397" className="font-body text-sm text-brand-blue hover:text-brand-blue transition-colors flex items-center gap-2">
             <i className="fas fa-phone"></i> (717) 769-5397
           </a>
           <button className="px-6 py-2.5 rounded-xl font-display text-lg tracking-wide transition-all hover:scale-105"
-                  style={{ background: 'linear-gradient(90deg, #0EA5E9, #22D3EE)', boxShadow: '0 0 20px rgba(14,165,233,0.3)' }}>
+                  style={{ background: 'linear-gradient(90deg, #3684bf, #00a0e2)', boxShadow: '0 0 20px rgba(0,160,226,0.3)' }}>
             BOOK NOW
           </button>
         </div>
@@ -106,11 +106,11 @@ function Navigation() {
             <a href="#rooms" className="font-body text-lg text-white py-2">Our Rooms</a>
             <a href="#about" className="font-body text-lg text-white py-2">How It Works</a>
             <a href="#contact" className="font-body text-lg text-white py-2">Contact</a>
-            <a href="tel:7177695397" className="font-body text-lg text-cyan-400 py-2">
+            <a href="tel:7177695397" className="font-body text-lg text-brand-blue py-2">
               <i className="fas fa-phone mr-2"></i>(717) 769-5397
             </a>
             <button className="w-full py-4 rounded-xl font-display text-xl tracking-wide mt-2"
-                    style={{ background: 'linear-gradient(90deg, #0EA5E9, #22D3EE)' }}>
+                    style={{ background: 'linear-gradient(90deg, #3684bf, #00a0e2)' }}>
               BOOK NOW
             </button>
           </div>
@@ -148,9 +148,9 @@ function Hero() {
 
       <div className="relative z-10 text-center px-6 max-w-5xl mx-auto pt-20">
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-8"
-             style={{ background: 'rgba(14,165,233,0.1)', border: '1px solid rgba(14,165,233,0.3)', backdropFilter: 'blur(10px)' }}>
-          <i className="fas fa-map-marker-alt text-cyan-400"></i>
-          <span className="font-ui text-sm text-cyan-400">Downtown Gettysburg, PA</span>
+             style={{ background: 'rgba(0,160,226,0.1)', border: '1px solid rgba(0,160,226,0.3)', backdropFilter: 'blur(10px)' }}>
+          <i className="fas fa-map-marker-alt text-brand-blue"></i>
+          <span className="font-ui text-sm text-brand-blue">Downtown Gettysburg, PA</span>
         </div>
 
         <h1 className="font-display text-6xl md:text-8xl lg:text-9xl tracking-wider mb-6 text-white leading-none drop-shadow-2xl">
@@ -166,7 +166,7 @@ function Hero() {
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
           <button className="px-10 py-5 rounded-xl font-display text-2xl tracking-wider transition-all hover:scale-105 animate-pulse-glow"
-                  style={{ background: 'linear-gradient(90deg, #0EA5E9, #22D3EE)' }}>
+                  style={{ background: 'linear-gradient(90deg, #3684bf, #00a0e2)' }}>
             <i className="fas fa-calendar-alt mr-3"></i>BOOK YOUR ESCAPE
           </button>
           <a href="#rooms" className="px-8 py-5 rounded-xl font-display text-xl tracking-wide transition-all hover:scale-105 hover:bg-white/10"
@@ -188,7 +188,7 @@ function Hero() {
           </div>
           <div className="w-px h-4 bg-slate-500"></div>
           <div className="flex items-center gap-2">
-            <i className="fas fa-user-shield text-cyan-400"></i>
+            <i className="fas fa-user-shield text-brand-blue"></i>
             <span className="font-ui text-sm">Private Games Only</span>
           </div>
           <div className="w-px h-4 bg-slate-500"></div>
@@ -288,9 +288,9 @@ function RoomCarousel() {
               <div 
                 className="relative rounded-3xl overflow-hidden"
                 style={{ 
-                  boxShadow: index === currentIndex ? '0 0 50px 5px rgba(14,165,233,0.4), 0 0 100px 10px rgba(14,165,233,0.2)' : '0 20px 40px rgba(0,0,0,0.5)',
+                  boxShadow: index === currentIndex ? '0 0 50px 5px rgba(0,160,226,0.4), 0 0 100px 10px rgba(0,160,226,0.2)' : '0 20px 40px rgba(0,0,0,0.5)',
                   border: index === currentIndex ? '3px solid rgba(0,0,0,0.8)' : '3px solid rgba(0,0,0,0.6)',
-                  outline: index === currentIndex ? '2px solid rgba(14,165,233,0.5)' : 'none'
+                  outline: index === currentIndex ? '2px solid rgba(0,160,226,0.5)' : 'none'
                 }}
               >
                 {/* Room background image */}
@@ -311,29 +311,29 @@ function RoomCarousel() {
                       {room.description}
                     </p>
 
-                    {/* Stats - consistent cyan color scheme */}
+                    {/* Stats - brand blue color scheme */}
                     <div className="flex flex-wrap items-center gap-2 md:gap-3 mb-5">
                       <span className="flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm font-ui text-white"
-                            style={{ background: 'rgba(14,165,233,0.3)', border: '1px solid rgba(14,165,233,0.4)' }}>
-                        <i className="fas fa-clock text-cyan-400"></i> {room.duration} MIN
+                            style={{ background: 'rgba(0,160,226,0.3)', border: '1px solid rgba(0,160,226,0.4)' }}>
+                        <i className="fas fa-clock text-brand-blue"></i> {room.duration} MIN
                       </span>
                       <span className="flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm font-ui text-white"
-                            style={{ background: 'rgba(14,165,233,0.3)', border: '1px solid rgba(14,165,233,0.4)' }}>
-                        <i className="fas fa-users text-cyan-400"></i> {room.players}
+                            style={{ background: 'rgba(0,160,226,0.3)', border: '1px solid rgba(0,160,226,0.4)' }}>
+                        <i className="fas fa-users text-brand-blue"></i> {room.players}
                       </span>
                       <span className="flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm font-ui text-white"
-                            style={{ background: 'rgba(14,165,233,0.3)', border: '1px solid rgba(14,165,233,0.4)' }}>
-                        <i className="fas fa-puzzle-piece text-cyan-400"></i> {room.difficulty}/10
+                            style={{ background: 'rgba(0,160,226,0.3)', border: '1px solid rgba(0,160,226,0.4)' }}>
+                        <i className="fas fa-puzzle-piece text-brand-blue"></i> {room.difficulty}/10
                       </span>
                       <span className="flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm font-ui text-white"
-                            style={{ background: 'rgba(14,165,233,0.3)', border: '1px solid rgba(14,165,233,0.4)' }}>
-                        <i className="fas fa-trophy text-cyan-400"></i> {room.escapeRate}%
+                            style={{ background: 'rgba(0,160,226,0.3)', border: '1px solid rgba(0,160,226,0.4)' }}>
+                        <i className="fas fa-trophy text-brand-blue"></i> {room.escapeRate}%
                       </span>
                     </div>
 
                     {index === currentIndex && (
                       <button className="px-8 py-3 rounded-xl font-display text-xl tracking-wide transition-all hover:scale-105"
-                              style={{ background: 'linear-gradient(90deg, #0EA5E9, #22D3EE)', boxShadow: '0 0 30px rgba(14,165,233,0.4)' }}>
+                              style={{ background: 'linear-gradient(90deg, #3684bf, #00a0e2)', boxShadow: '0 0 30px rgba(0,160,226,0.4)' }}>
                         BOOK THIS ROOM
                       </button>
                     )}
@@ -367,7 +367,7 @@ function RoomCarousel() {
               key={index}
               onClick={() => goToSlide(index)}
               className={`h-2 rounded-full transition-all duration-300 ${
-                currentIndex === index ? 'w-10 bg-cyan-400' : 'w-2 bg-slate-600 hover:bg-slate-500'
+                currentIndex === index ? 'w-10 bg-brand-blue' : 'w-2 bg-slate-600 hover:bg-slate-500'
               }`}
             ></button>
           ))}
@@ -402,12 +402,12 @@ function HowItWorks() {
           {steps.map((step, index) => (
             <div key={index} className="relative group flex">
               <div className="text-center p-8 rounded-2xl transition-all group-hover:scale-105 flex flex-col w-full"
-                   style={{ background: 'rgba(14,165,233,0.05)', border: '1px solid rgba(14,165,233,0.1)' }}>
+                   style={{ background: 'rgba(0,160,226,0.05)', border: '1px solid rgba(0,160,226,0.1)' }}>
                 <div className="w-20 h-20 mx-auto mb-6 rounded-2xl flex items-center justify-center transition-all group-hover:scale-110"
-                     style={{ background: 'linear-gradient(135deg, rgba(14,165,233,0.2), rgba(34,211,238,0.1))' }}>
-                  <i className={`fas ${step.icon} text-3xl text-cyan-400`}></i>
+                     style={{ background: 'linear-gradient(135deg, rgba(0,160,226,0.2), rgba(54,132,191,0.1))' }}>
+                  <i className={`fas ${step.icon} text-3xl text-brand-blue`}></i>
                 </div>
-                <div className="font-display text-4xl text-cyan-400 mb-2">0{index + 1}</div>
+                <div className="font-display text-4xl text-brand-blue mb-2">0{index + 1}</div>
                 <h3 className="font-display text-2xl tracking-wide mb-3 text-white">{step.title}</h3>
                 <p className="font-body text-slate-400 flex-grow">{step.description}</p>
               </div>
@@ -450,11 +450,11 @@ function WhoIsThisFor() {
                  style={{ background: 'rgba(15,23,42,0.5)', border: '1px solid rgba(255,255,255,0.05)' }}>
               <div className="flex items-start gap-4">
                 <div className="w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0 transition-all group-hover:scale-110"
-                     style={{ background: 'linear-gradient(135deg, rgba(14,165,233,0.2), rgba(34,211,238,0.1))' }}>
-                  <i className={`fas ${item.icon} text-xl text-cyan-400`}></i>
+                     style={{ background: 'linear-gradient(135deg, rgba(0,160,226,0.2), rgba(54,132,191,0.1))' }}>
+                  <i className={`fas ${item.icon} text-xl text-brand-blue`}></i>
                 </div>
                 <div>
-                  <h3 className="font-display text-2xl tracking-wide mb-2 text-white group-hover:text-cyan-400 transition-colors">{item.title}</h3>
+                  <h3 className="font-display text-2xl tracking-wide mb-2 text-white group-hover:text-brand-blue transition-colors">{item.title}</h3>
                   <p className="font-body text-slate-400">{item.description}</p>
                 </div>
               </div>
@@ -554,7 +554,7 @@ function Testimonials() {
 // CTA Section
 function CTASection() {
   return (
-    <section className="py-24 px-6 relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #0EA5E9 0%, #0284C7 100%)' }}>
+    <section className="py-24 px-6 relative overflow-hidden" style={{ background: 'linear-gradient(135deg, #3684bf 0%, #0284C7 100%)' }}>
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 left-0 w-full h-full" 
              style={{ backgroundImage: 'radial-gradient(circle at 20% 50%, white 1px, transparent 1px)', backgroundSize: '50px 50px' }}></div>
@@ -588,8 +588,8 @@ function Contact() {
             <div className="space-y-6">
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0"
-                     style={{ background: 'rgba(14,165,233,0.2)' }}>
-                  <i className="fas fa-map-marker-alt text-cyan-400"></i>
+                     style={{ background: 'rgba(0,160,226,0.2)' }}>
+                  <i className="fas fa-map-marker-alt text-brand-blue"></i>
                 </div>
                 <div>
                   <h3 className="font-display text-xl tracking-wide text-white mb-1">ADDRESS</h3>
@@ -599,19 +599,19 @@ function Contact() {
               
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0"
-                     style={{ background: 'rgba(14,165,233,0.2)' }}>
-                  <i className="fas fa-phone text-cyan-400"></i>
+                     style={{ background: 'rgba(0,160,226,0.2)' }}>
+                  <i className="fas fa-phone text-brand-blue"></i>
                 </div>
                 <div>
                   <h3 className="font-display text-xl tracking-wide text-white mb-1">PHONE</h3>
-                  <a href="tel:7177695397" className="font-body text-cyan-400 hover:text-cyan-300 transition-colors text-lg">(717) 769-5397</a>
+                  <a href="tel:7177695397" className="font-body text-brand-blue hover:text-brand-blue transition-colors text-lg">(717) 769-5397</a>
                 </div>
               </div>
 
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0"
-                     style={{ background: 'rgba(14,165,233,0.2)' }}>
-                  <i className="fas fa-clock text-cyan-400"></i>
+                     style={{ background: 'rgba(0,160,226,0.2)' }}>
+                  <i className="fas fa-clock text-brand-blue"></i>
                 </div>
                 <div>
                   <h3 className="font-display text-xl tracking-wide text-white mb-1">HOURS</h3>
@@ -666,7 +666,7 @@ function Footer() {
             <img src={IMAGES.lockIcon} alt="Escape Gettysburg" className="h-12 w-auto" />
             <div className="flex flex-col">
               <span className="font-display text-xl text-white tracking-wider leading-none">ESCAPE</span>
-              <span className="font-display text-sm text-cyan-400 tracking-widest leading-none">GETTYSBURG</span>
+              <span className="font-display text-sm text-brand-blue tracking-widest leading-none">GETTYSBURG</span>
             </div>
           </a>
           
