@@ -5,6 +5,7 @@ const { useState, useEffect, useRef } = React;
 // Image paths - place your images in /images folder
 const IMAGES = {
   logo: "/images/logo.png",
+  titleLogo: "/images/title_logo.png",
   lockIcon: "/images/lock_only.png",
   heist: "/images/heist.png",
   madhatter: "/images/madhatter.png",
@@ -74,12 +75,8 @@ function Navigation() {
            borderBottom: scrolled ? '1px solid rgba(255,255,255,0.1)' : 'none'
          }}>
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-        <a href="#" className="flex items-center gap-4 group">
-          <img src={IMAGES.lockIcon} alt="Escape Gettysburg" className="h-14 md:h-16 w-auto transition-all group-hover:scale-105" />
-          <div className="flex flex-col">
-            <span className="font-display text-2xl md:text-3xl text-white tracking-wider leading-none">ESCAPE</span>
-            <span className="font-display text-lg md:text-xl text-brand-blue tracking-widest leading-none">GETTYSBURG</span>
-          </div>
+        <a href="#" className="flex items-center group">
+          <img src={IMAGES.titleLogo} alt="Escape Gettysburg" className="h-12 md:h-14 w-auto transition-all group-hover:scale-105" />
         </a>
         
         <div className="hidden md:flex items-center gap-8">
@@ -662,12 +659,8 @@ function Footer() {
     <footer className="py-12 px-6 border-t border-white/10" style={{ background: '#0A0A0B' }}>
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          <a href="#" className="flex items-center gap-3">
-            <img src={IMAGES.lockIcon} alt="Escape Gettysburg" className="h-12 w-auto" />
-            <div className="flex flex-col">
-              <span className="font-display text-xl text-white tracking-wider leading-none">ESCAPE</span>
-              <span className="font-display text-sm text-brand-blue tracking-widest leading-none">GETTYSBURG</span>
-            </div>
+          <a href="#" className="flex items-center">
+            <img src={IMAGES.titleLogo} alt="Escape Gettysburg" className="h-10 w-auto" />
           </a>
           
           <div className="flex flex-wrap items-center justify-center gap-6 text-sm font-ui text-slate-500">
