@@ -89,10 +89,10 @@ function Navigation() {
           <a href="tel:7177695397" className="font-body text-sm text-brand-blue hover:text-brand-blue transition-colors flex items-center gap-2">
             <i className="fas fa-phone"></i> (717) 769-5397
           </a>
-          <button className="px-6 py-2.5 rounded-xl font-display text-lg tracking-wide transition-all hover:scale-105"
+          <a href="booking.html" className="px-6 py-2.5 rounded-xl font-display text-lg tracking-wide transition-all hover:scale-105 text-white"
                   style={{ background: 'linear-gradient(90deg, #3684bf, #00a0e2)', boxShadow: '0 0 20px rgba(0,160,226,0.3)' }}>
             BOOK NOW
-          </button>
+          </a>
         </div>
 
         <button className="md:hidden text-white text-2xl" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
@@ -109,10 +109,10 @@ function Navigation() {
             <a href="tel:7177695397" className="font-body text-lg text-brand-blue py-2">
               <i className="fas fa-phone mr-2"></i>(717) 769-5397
             </a>
-            <button className="w-full py-4 rounded-xl font-display text-xl tracking-wide mt-2"
+            <a href="booking.html" className="w-full py-4 rounded-xl font-display text-xl tracking-wide mt-2 text-white text-center block"
                     style={{ background: 'linear-gradient(90deg, #3684bf, #00a0e2)' }}>
               BOOK NOW
-            </button>
+            </a>
           </div>
         </div>
       )}
@@ -165,10 +165,10 @@ function Hero() {
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
-          <button className="px-10 py-5 rounded-xl font-display text-2xl tracking-wider transition-all hover:scale-105 animate-pulse-glow"
+          <a href="booking.html" className="px-10 py-5 rounded-xl font-display text-2xl tracking-wider transition-all hover:scale-105 animate-pulse-glow text-white"
                   style={{ background: 'linear-gradient(90deg, #3684bf, #00a0e2)' }}>
             <i className="fas fa-calendar-alt mr-3"></i>BOOK YOUR ESCAPE
-          </button>
+          </a>
           <a href="#rooms" className="px-8 py-5 rounded-xl font-display text-xl tracking-wide transition-all hover:scale-105 hover:bg-white/10"
                   style={{ border: '2px solid rgba(255,255,255,0.3)', color: 'white', backdropFilter: 'blur(10px)' }}>
             <i className="fas fa-play-circle mr-2"></i>SEE OUR ROOMS
@@ -332,10 +332,10 @@ function RoomCarousel() {
                     </div>
 
                     {index === currentIndex && (
-                      <button className="px-8 py-3 rounded-xl font-display text-xl tracking-wide transition-all hover:scale-105"
+                      <a href="booking.html" className="inline-block px-8 py-3 rounded-xl font-display text-xl tracking-wide transition-all hover:scale-105 text-white"
                               style={{ background: 'linear-gradient(90deg, #3684bf, #00a0e2)', boxShadow: '0 0 30px rgba(0,160,226,0.4)' }}>
                         BOOK THIS ROOM
-                      </button>
+                      </a>
                     )}
                   </div>
                 </div>
@@ -567,9 +567,9 @@ function CTASection() {
         <p className="font-body text-xl text-white/80 mb-10 max-w-2xl mx-auto">
           Book now and lock in your adventure. Spots fill up fast — especially on weekends!
         </p>
-        <button className="px-12 py-6 rounded-xl font-display text-3xl tracking-wider transition-all hover:scale-105 bg-white text-slate-900 shadow-2xl">
+        <a href="booking.html" className="inline-block px-12 py-6 rounded-xl font-display text-3xl tracking-wider transition-all hover:scale-105 bg-white text-slate-900 shadow-2xl">
           <i className="fas fa-bolt mr-3"></i>BOOK NOW
-        </button>
+        </a>
       </div>
     </section>
   );
