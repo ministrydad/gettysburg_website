@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ | Escape Gettysburg</title>
+  <meta name="description" content="Frequently asked questions about Escape Gettysburg. Learn about pricing, policies, accessibility, and more.">
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <style>
+    .faq-item {
+      border: 1px solid rgba(0, 160, 226, 0.2);
+      background: rgba(15, 23, 42, 0.5);
+      transition: all 0.3s ease;
+    }
+    
+    .faq-item:hover {
+      border-color: rgba(0, 160, 226, 0.4);
+      background: rgba(15, 23, 42, 0.7);
+    }
+    
+    .faq-item.active {
+      border-color: rgba(0, 160, 226, 0.5);
+      box-shadow: 0 0 30px rgba(0, 160, 226, 0.1);
+    }
+    
+    .faq-question {
+      cursor: pointer;
+    }
+    
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, padding 0.4s ease;
+    }
+    
+    .faq-item.active .faq-answer {
+      max-height: 500px;
+    }
+    
+    .faq-icon {
+      transition: transform 0.3s ease;
+    }
+    
+    .faq-item.active .faq-icon {
+      transform: rotate(45deg);
+    }
+  </style>
+</head>
+<body style="background: #0A0A0B;">
+  
+  <!-- Navigation -->
+  <nav class="sticky top-0 z-50 py-3" style="background: rgba(10,10,11,0.95); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255,255,255,0.1);">
+    <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+      <a href="index.html" class="flex items-center group">
+        <img src="/images/title_logo.png" alt="Escape Gettysburg" class="h-12 md:h-14 w-auto transition-all group-hover:scale-105" />
+      </a>
+      
+      <div class="hidden md:flex items-center gap-8">
+        <a href="index.html#rooms" class="font-body text-sm text-slate-300 hover:text-white transition-colors">Our Rooms</a>
+        <a href="index.html#about" class="font-body text-sm text-slate-300 hover:text-white transition-colors">How It Works</a>
+        <a href="index.html#contact" class="font-body text-sm text-slate-300 hover:text-white transition-colors">Contact</a>
+        <a href="tel:7177695397" class="font-body text-sm text-brand-blue hover:text-white transition-colors flex items-center gap-2">
+          <i class="fas fa-phone"></i> (717) 769-5397
+        </a>
+        <a href="https://offthecouch.io/book/escapegettysburg" target="_blank" rel="noopener noreferrer" class="px-6 py-2.5 rounded-xl font-display text-lg tracking-wide transition-all hover:scale-105 text-white"
+                style="background: linear-gradient(90deg, #3684bf, #00a0e2); box-shadow: 0 0 20px rgba(0,160,226,0.3);">
+          BOOK NOW
+        </a>
+      </div>
+
+      <a href="index.html" class="md:hidden text-white text-sm flex items-center gap-2">
+        <i class="fas fa-arrow-left"></i> Back
+      </a>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="py-16 md:py-24 px-6 text-center" style="background: linear-gradient(180deg, #0F172A 0%, #0A0A0B 100%);">
+    <div class="max-w-4xl mx-auto">
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6"
+           style="background: rgba(0,160,226,0.1); border: 1px solid rgba(0,160,226,0.3);">
+        <i class="fas fa-question-circle text-brand-blue"></i>
+        <span class="font-ui text-sm text-brand-blue">Got Questions?</span>
+      </div>
+      <h1 class="font-display text-5xl md:text-7xl tracking-wider mb-4 text-white">
+        FREQUENTLY ASKED <span class="gradient-text">QUESTIONS</span>
+      </h1>
+      <p class="font-body text-xl text-slate-400 max-w-2xl mx-auto">
+        Everything you need to know before your escape adventure. Can't find your answer? Give us a call!
+      </p>
+    </div>
+  </header>
+
+  <!-- FAQ Section -->
+  <main class="px-6 py-16">
+    <div class="max-w-3xl mx-auto space-y-4">
+      
+      <!-- FAQ Item 1 -->
+      <div class="faq-item rounded-2xl overflow-hidden">
+        <div class="faq-question p-6 flex items-center justify-between" onclick="toggleFAQ(this)">
+          <h3 class="font-display text-xl md:text-2xl tracking-wide text-white pr-4">
+            <i class="fas fa-child text-brand-blue mr-3"></i>ARE CHILDREN ALLOWED?
+          </h3>
+          <div class="faq-icon w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0"
+               style="background: rgba(0,160,226,0.2);">
+            <i class="fas fa-plus text-brand-blue"></i>
+          </div>
+        </div>
+        <div class="faq-answer px-6">
+          <div class="pb-6 pt-2 border-t border-white/10">
+            <p class="font-body text-slate-300 leading-relaxed">
+              Of course, we pride ourselves on being family friendly! Our only policy is that if a majority of the players are 13 years of age or younger, then we do require a paying adult, 18 years of age or older to be in the room.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Item 2 -->
+      <div class="faq-item rounded-2xl overflow-hidden">
+        <div class="faq-question p-6 flex items-center justify-between" onclick="toggleFAQ(this)">
+          <h3 class="font-display text-xl md:text-2xl tracking-wide text-white pr-4">
+            <i class="fas fa-dollar-sign text-brand-blue mr-3"></i>WHAT IS THE COST OF A TICKET?
+          </h3>
+          <div class="faq-icon w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0"
+               style="background: rgba(0,160,226,0.2);">
+            <i class="fas fa-plus text-brand-blue"></i>
+          </div>
+        </div>
+        <div class="faq-answer px-6">
+          <div class="pb-6 pt-2 border-t border-white/10">
+            <p class="font-body text-slate-300 leading-relaxed">
+              Easy question! Our tickets start at only <span class="text-white font-semibold">$35.00 per person</span>, but the more players you have, the cheaper it gets. Oh, and don't forget, <span class="text-brand-blue font-semibold">kids 8 and younger are always free!</span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Item 3 -->
+      <div class="faq-item rounded-2xl overflow-hidden">
+        <div class="faq-question p-6 flex items-center justify-between" onclick="toggleFAQ(this)">
+          <h3 class="font-display text-xl md:text-2xl tracking-wide text-white pr-4">
+            <i class="fas fa-walking text-brand-blue mr-3"></i>ARE WALK-INS ALLOWED?
+          </h3>
+          <div class="faq-icon w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0"
+               style="background: rgba(0,160,226,0.2);">
+            <i class="fas fa-plus text-brand-blue"></i>
+          </div>
+        </div>
+        <div class="faq-answer px-6">
+          <div class="pb-6 pt-2 border-t border-white/10">
+            <p class="font-body text-slate-300 leading-relaxed mb-4">
+              Absolutely they are! The only thing we want to share with you is the following:
+            </p>
+            <ul class="font-body text-slate-300 space-y-2">
+              <li class="flex items-start gap-3">
+                <i class="fas fa-chevron-right text-brand-blue text-sm mt-1"></i>
+                <span>If all the rooms are booked up, you may have to wait.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fas fa-chevron-right text-brand-blue text-sm mt-1"></i>
+                <span>Reservations do take priority over walk-ins.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fas fa-chevron-right text-brand-blue text-sm mt-1"></i>
+                <span>Staff limitations may prevent us from taking walk-ins.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Item 4 -->
+      <div class="faq-item rounded-2xl overflow-hidden">
+        <div class="faq-question p-6 flex items-center justify-between" onclick="toggleFAQ(this)">
+          <h3 class="font-display text-xl md:text-2xl tracking-wide text-white pr-4">
+            <i class="fas fa-users text-brand-blue mr-3"></i>WILL WE BE IN A ROOM WITH STRANGERS?
+          </h3>
+          <div class="faq-icon w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0"
+               style="background: rgba(0,160,226,0.2);">
+            <i class="fas fa-plus text-brand-blue"></i>
+          </div>
+        </div>
+        <div class="faq-answer px-6">
+          <div class="pb-6 pt-2 border-t border-white/10">
+            <p class="font-body text-slate-300 leading-relaxed">
+              Only if you want to! When you make the booking online, there is an option to <span class="text-white font-semibold">'Make Private'</span> — it's that simple. If you don't select that option, then you can have the fun of playing with new friends!
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Item 5 -->
+      <div class="faq-item rounded-2xl overflow-hidden">
+        <div class="faq-question p-6 flex items-center justify-between" onclick="toggleFAQ(this)">
+          <h3 class="font-display text-xl md:text-2xl tracking-wide text-white pr-4">
+            <i class="fas fa-calendar-times text-brand-blue mr-3"></i>DO YOU HAVE A CANCELLATION POLICY?
+          </h3>
+          <div class="faq-icon w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0"
+               style="background: rgba(0,160,226,0.2);">
+            <i class="fas fa-plus text-brand-blue"></i>
+          </div>
+        </div>
+        <div class="faq-answer px-6">
+          <div class="pb-6 pt-2 border-t border-white/10">
+            <p class="font-body text-slate-300 leading-relaxed">
+              We sure do. You may cancel up to <span class="text-white font-semibold">24 hours prior</span> to your booking. If this makes you nervous, have no fear — we offer booking insurance!
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Item 6 -->
+      <div class="faq-item rounded-2xl overflow-hidden">
+        <div class="faq-question p-6 flex items-center justify-between" onclick="toggleFAQ(this)">
+          <h3 class="font-display text-xl md:text-2xl tracking-wide text-white pr-4">
+            <i class="fas fa-shield-alt text-brand-blue mr-3"></i>HOW DOES THE BOOKING INSURANCE WORK?
+          </h3>
+          <div class="faq-icon w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0"
+               style="background: rgba(0,160,226,0.2);">
+            <i class="fas fa-plus text-brand-blue"></i>
+          </div>
+        </div>
+        <div class="faq-answer px-6">
+          <div class="pb-6 pt-2 border-t border-white/10">
+            <p class="font-body text-slate-300 leading-relaxed">
+              Great question! When you make your reservation, simply add one (1) booking insurance to your booking. With this, you may cancel or reschedule at <span class="text-white font-semibold">anytime</span> prior to your booking and get a full refund minus the cost of the booking insurance.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Item 7 -->
+      <div class="faq-item rounded-2xl overflow-hidden">
+        <div class="faq-question p-6 flex items-center justify-between" onclick="toggleFAQ(this)">
+          <h3 class="font-display text-xl md:text-2xl tracking-wide text-white pr-4">
+            <i class="fas fa-wheelchair text-brand-blue mr-3"></i>IS YOUR LOCATION ADA FRIENDLY?
+          </h3>
+          <div class="faq-icon w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0"
+               style="background: rgba(0,160,226,0.2);">
+            <i class="fas fa-plus text-brand-blue"></i>
+          </div>
+        </div>
+        <div class="faq-answer px-6">
+          <div class="pb-6 pt-2 border-t border-white/10">
+            <p class="font-body text-slate-300 leading-relaxed">
+              <span class="text-brand-blue font-semibold">Yes, we are!</span> All rooms can accommodate ADA and wheelchair access.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ Item 8 -->
+      <div class="faq-item rounded-2xl overflow-hidden">
+        <div class="faq-question p-6 flex items-center justify-between" onclick="toggleFAQ(this)">
+          <h3 class="font-display text-xl md:text-2xl tracking-wide text-white pr-4">
+            <i class="fas fa-camera text-brand-blue mr-3"></i>CAN WE TAKE PHOTOS IN THE ROOM?
+          </h3>
+          <div class="faq-icon w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0"
+               style="background: rgba(0,160,226,0.2);">
+            <i class="fas fa-plus text-brand-blue"></i>
+          </div>
+        </div>
+        <div class="faq-answer px-6">
+          <div class="pb-6 pt-2 border-t border-white/10">
+            <p class="font-body text-slate-300 leading-relaxed">
+              So sorry, but photos are not allowed in the room. I know it sounds silly, but this helps to keep the fun secrets of the game just that... <span class="text-white font-semibold">secret!</span> But have no fear, we will do a photo of your group when your game is over.
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Still Have Questions CTA -->
+  <section class="px-6 pb-16">
+    <div class="max-w-3xl mx-auto">
+      <div class="p-8 md:p-12 rounded-2xl text-center" style="background: linear-gradient(135deg, rgba(54,132,191,0.2) 0%, rgba(0,160,226,0.1) 100%); border: 1px solid rgba(0,160,226,0.3);">
+        <h2 class="font-display text-3xl md:text-4xl tracking-wide text-white mb-4">
+          STILL HAVE QUESTIONS?
+        </h2>
+        <p class="font-body text-lg text-slate-300 mb-8">
+          We're here to help! Give us a call or send us a message.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="tel:7177695397" class="flex items-center gap-2 px-8 py-4 rounded-xl font-display text-xl tracking-wide transition-all hover:scale-105 text-white"
+             style="background: linear-gradient(90deg, #3684bf, #00a0e2); box-shadow: 0 0 30px rgba(0,160,226,0.3);">
+            <i class="fas fa-phone"></i> CALL US
+          </a>
+          <a href="index.html#contact" class="flex items-center gap-2 px-8 py-4 rounded-xl font-display text-xl tracking-wide transition-all hover:scale-105"
+             style="background: rgba(255,255,255,0.05); border: 2px solid rgba(255,255,255,0.2); color: white;">
+            <i class="fas fa-envelope"></i> CONTACT US
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 px-6 border-t border-white/10" style="background: #0A0A0B;">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+        <a href="index.html" class="flex items-center">
+          <img src="/images/title_logo.png" alt="Escape Gettysburg" class="h-10 w-auto" />
+        </a>
+        
+        <div class="flex flex-wrap items-center justify-center gap-6 text-sm font-ui text-slate-500">
+          <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+          <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+          <a href="#" class="hover:text-white transition-colors">Waivers</a>
+        </div>
+
+        <p class="font-ui text-sm text-slate-500">
+          © 2016-2025 Escape Gettysburg
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FAQ Toggle Script -->
+  <script>
+    function toggleFAQ(element) {
+      const faqItem = element.parentElement;
+      const isActive = faqItem.classList.contains('active');
+      
+      // Close all other FAQ items
+      document.querySelectorAll('.faq-item').forEach(item => {
+        item.classList.remove('active');
+      });
+      
+      // Toggle current item
+      if (!isActive) {
+        faqItem.classList.add('active');
+      }
+    }
+    
+    // Open first FAQ by default
+    document.addEventListener('DOMContentLoaded', () => {
+      const firstFAQ = document.querySelector('.faq-item');
+      if (firstFAQ) {
+        firstFAQ.classList.add('active');
+      }
+    });
+  </script>
+</body>
+</html>
