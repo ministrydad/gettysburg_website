@@ -668,7 +668,7 @@ function Footer() {
           <div className="flex flex-wrap items-center justify-center gap-6 text-sm font-ui text-slate-500">
             <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
             <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
-            <a href="#" className="hover:text-white transition-colors">Waivers</a>
+            <a href="waivers.html" className="hover:text-white transition-colors">Waivers</a>
             <a href="faq.html" className="hover:text-white transition-colors">FAQ</a>
           </div>
 

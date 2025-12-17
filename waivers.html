@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Waivers | Escape Gettysburg</title>
+  <meta name="description" content="Sign your waiver online before arriving at Escape Gettysburg. Quick and easy digital waiver for all participants.">
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <style>
+    #otcContainer {
+      min-height: 600px;
+    }
+    
+    #otcContainer iframe {
+      background: transparent;
+    }
+  </style>
+</head>
+<body style="background: #0A0A0B;">
+  
+  <!-- Navigation -->
+  <nav class="sticky top-0 z-50 py-3" style="background: rgba(10,10,11,0.95); backdrop-filter: blur(20px); border-bottom: 1px solid rgba(255,255,255,0.1);">
+    <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+      <a href="index.html" class="flex items-center group">
+        <img src="/images/title_logo.png" alt="Escape Gettysburg" class="h-12 md:h-14 w-auto transition-all group-hover:scale-105" />
+      </a>
+      
+      <div class="hidden md:flex items-center gap-8">
+        <a href="index.html#rooms" class="font-body text-sm text-slate-300 hover:text-white transition-colors">Our Rooms</a>
+        <a href="index.html#about" class="font-body text-sm text-slate-300 hover:text-white transition-colors">How It Works</a>
+        <a href="faq.html" class="font-body text-sm text-slate-300 hover:text-white transition-colors">FAQ</a>
+        <a href="index.html#contact" class="font-body text-sm text-slate-300 hover:text-white transition-colors">Contact</a>
+        <a href="tel:7177695397" class="font-body text-sm text-brand-blue hover:text-white transition-colors flex items-center gap-2">
+          <i class="fas fa-phone"></i> (717) 769-5397
+        </a>
+        <a href="https://offthecouch.io/book/escapegettysburg" target="_blank" rel="noopener noreferrer" class="px-6 py-2.5 rounded-xl font-display text-lg tracking-wide transition-all hover:scale-105 text-white"
+                style="background: linear-gradient(90deg, #3684bf, #00a0e2); box-shadow: 0 0 20px rgba(0,160,226,0.3);">
+          BOOK NOW
+        </a>
+      </div>
+
+      <a href="index.html" class="md:hidden text-white text-sm flex items-center gap-2">
+        <i class="fas fa-arrow-left"></i> Back
+      </a>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="py-16 md:py-20 px-6 text-center" style="background: linear-gradient(180deg, #0F172A 0%, #0A0A0B 100%);">
+    <div class="max-w-4xl mx-auto">
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6"
+           style="background: rgba(0,160,226,0.1); border: 1px solid rgba(0,160,226,0.3);">
+        <i class="fas fa-file-signature text-brand-blue"></i>
+        <span class="font-ui text-sm text-brand-blue">Quick & Easy</span>
+      </div>
+      <h1 class="font-display text-5xl md:text-7xl tracking-wider mb-4 text-white">
+        SIGN YOUR <span class="gradient-text">WAIVER</span>
+      </h1>
+      <p class="font-body text-xl text-slate-400 max-w-2xl mx-auto">
+        Save time at check-in! Complete your waiver online before you arrive.
+      </p>
+    </div>
+  </header>
+
+  <!-- Info Banner -->
+  <div class="px-6 pb-8">
+    <div class="max-w-4xl mx-auto">
+      <div class="flex flex-col md:flex-row items-center justify-center gap-6 py-6 px-6 rounded-xl" style="background: rgba(0,160,226,0.05); border: 1px solid rgba(0,160,226,0.1);">
+        <div class="flex items-center gap-3 text-slate-300">
+          <i class="fas fa-clock text-brand-blue"></i>
+          <span class="font-ui text-sm">Takes less than 2 minutes</span>
+        </div>
+        <div class="w-px h-4 bg-slate-700 hidden md:block"></div>
+        <div class="flex items-center gap-3 text-slate-300">
+          <i class="fas fa-users text-brand-blue"></i>
+          <span class="font-ui text-sm">One waiver per participant</span>
+        </div>
+        <div class="w-px h-4 bg-slate-700 hidden md:block"></div>
+        <div class="flex items-center gap-3 text-slate-300">
+          <i class="fas fa-child text-brand-blue"></i>
+          <span class="font-ui text-sm">Parents sign for minors</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Waiver Form Container -->
+  <main class="px-6 pb-16">
+    <div class="max-w-4xl mx-auto">
+      <div id="otcContainer"></div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-8 px-6 border-t border-white/10" style="background: #0A0A0B;">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+        <a href="index.html" class="flex items-center">
+          <img src="/images/title_logo.png" alt="Escape Gettysburg" class="h-10 w-auto" />
+        </a>
+        
+        <div class="flex flex-wrap items-center justify-center gap-6 text-sm font-ui text-slate-500">
+          <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+          <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+          <a href="waivers.html" class="hover:text-white transition-colors">Waivers</a>
+          <a href="faq.html" class="hover:text-white transition-colors">FAQ</a>
+        </div>
+
+        <p class="font-ui text-sm text-slate-500">
+          © 2016-2025 Escape Gettysburg
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Off The Couch Waiver Widget -->
+  <script>
+    let f = document.createElement('iframe');
+    f.src = 'https://offthecouch.io/checkin/escapegettysburg';
+    f.width = '100%';
+    f.style.border = 'none';
+    f.style.minHeight = '600px';
+    window.addEventListener('message', e => {
+      if (e.origin === 'https://offthecouch.io') f.style.height = e.data.height + 'px';
+    });
+    document.getElementById('otcContainer').appendChild(f);
+  </script>
+</body>
+</html>
