@@ -3,10 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Escape Gettysburg | Your Adventure Awaits</title>
-  <meta name="description" content="Gettysburg's premier escape room experience. Three immersive adventures, 60 minutes each. Book your escape today!">
+  <title>Escape Gettysburg | Escape Rooms in Gettysburg, PA</title>
+  <meta name="description" content="Gettysburg's premier escape room experience. Three immersive adventures - The Gettysburg Heist, The Mad Hatter, and Houdini's Workshop. Book your escape today!">
+  <meta name="keywords" content="escape room, Gettysburg, escape room Gettysburg, team building, family fun, puzzle room, Gettysburg attractions">
+  <meta name="author" content="Escape Gettysburg">
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://escapegettysburg.com/">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://escapegettysburg.com/">
+  <meta property="og:title" content="Escape Gettysburg | Escape Rooms in Gettysburg, PA">
+  <meta property="og:description" content="Gettysburg's premier escape room experience. Three immersive adventures awaiting you.">
+  <meta property="og:image" content="https://escapegettysburg.com/images/og-image.jpg">
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://escapegettysburg.com/">
+  <meta name="twitter:title" content="Escape Gettysburg | Escape Rooms in Gettysburg, PA">
+  <meta name="twitter:description" content="Gettysburg's premier escape room experience. Three immersive adventures awaiting you.">
+  <meta name="twitter:image" content="https://escapegettysburg.com/images/og-image.jpg">
   
   <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   
   <!-- Icons -->
@@ -17,16 +38,816 @@
   
   <!-- Custom Styles -->
   <link rel="stylesheet" href="styles.css">
+
+  <!-- Schema.org LocalBusiness Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EntertainmentBusiness",
+    "name": "Escape Gettysburg",
+    "description": "Gettysburg's premier escape room experience with three immersive adventures.",
+    "url": "https://escapegettysburg.com",
+    "telephone": "+1-717-769-5397",
+    "email": "info@escapegettysburg.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "59 N. 5th Street",
+      "addressLocality": "Gettysburg",
+      "addressRegion": "PA",
+      "postalCode": "17325",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "39.8301",
+      "longitude": "-77.2311"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Wednesday", "Thursday", "Friday"],
+        "opens": "16:00",
+        "closes": "21:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Saturday",
+        "opens": "12:00",
+        "closes": "21:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": "Sunday",
+        "opens": "13:00",
+        "closes": "18:00"
+      }
+    ],
+    "priceRange": "$$",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "150"
+    },
+    "sameAs": [
+      "https://facebook.com/escapegettysburg",
+      "https://instagram.com/escapegettysburg"
+    ]
+  }
+  </script>
 </head>
-<body>
-  <div id="root"></div>
+<body style="background: #0A0A0B;">
   
-  <!-- React -->
-  <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
-  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
-  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-  
-  <!-- App -->
-  <script type="text/babel" src="app.js"></script>
+  <!-- Navigation -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-3" style="background: transparent;">
+    <div class="max-w-7xl mx-auto px-6 flex items-center justify-between">
+      <a href="/" class="flex items-center group">
+        <img src="/images/title_logo.png" alt="Escape Gettysburg" class="h-12 md:h-14 w-auto transition-all group-hover:scale-105">
+      </a>
+      
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#rooms" class="font-body text-sm text-slate-300 hover:text-white transition-colors">Our Rooms</a>
+        <a href="#about" class="font-body text-sm text-slate-300 hover:text-white transition-colors">How It Works</a>
+        <a href="private-events.html" class="font-body text-sm text-slate-300 hover:text-white transition-colors">Private Events</a>
+        <a href="faq.html" class="font-body text-sm text-slate-300 hover:text-white transition-colors">FAQ</a>
+        <a href="#contact" class="font-body text-sm text-slate-300 hover:text-white transition-colors">Contact</a>
+        <a href="tel:7177695397" class="font-body text-sm text-brand-blue hover:text-white transition-colors flex items-center gap-2">
+          <i class="fas fa-phone"></i> (717) 769-5397
+        </a>
+        <a href="https://offthecouch.io/book/escapegettysburg" target="_blank" rel="noopener noreferrer" 
+           class="px-6 py-2.5 rounded-xl font-display text-lg tracking-wide transition-all hover:scale-105 text-white"
+           style="background: linear-gradient(90deg, #3684bf, #00a0e2); box-shadow: 0 0 20px rgba(0,160,226,0.3);">
+          BOOK NOW
+        </a>
+      </div>
+
+      <button id="mobileMenuBtn" class="md:hidden text-white text-2xl">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden absolute top-full left-0 right-0 p-6" style="background: rgba(10,10,11,0.98);">
+      <div class="flex flex-col gap-4">
+        <a href="#rooms" class="font-body text-lg text-white py-2">Our Rooms</a>
+        <a href="#about" class="font-body text-lg text-white py-2">How It Works</a>
+        <a href="private-events.html" class="font-body text-lg text-white py-2">Private Events</a>
+        <a href="faq.html" class="font-body text-lg text-white py-2">FAQ</a>
+        <a href="#contact" class="font-body text-lg text-white py-2">Contact</a>
+        <a href="tel:7177695397" class="font-body text-lg text-brand-blue py-2">
+          <i class="fas fa-phone mr-2"></i>(717) 769-5397
+        </a>
+        <a href="https://offthecouch.io/book/escapegettysburg" target="_blank" rel="noopener noreferrer" 
+           class="w-full py-4 rounded-xl font-display text-xl tracking-wide mt-2 text-white text-center block"
+           style="background: linear-gradient(90deg, #3684bf, #00a0e2);">
+          BOOK NOW
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="min-h-screen flex items-center justify-center relative overflow-hidden">
+    <!-- Video Background -->
+    <div class="absolute inset-0 z-0">
+      <video autoplay muted loop playsinline class="hero-video w-full h-full object-cover">
+        <source src="/videos/hero.mp4" type="video/mp4">
+      </video>
+      <div class="film-grain"></div>
+      <div class="scanlines"></div>
+      <div class="vignette"></div>
+      <div class="color-grade"></div>
+      <div class="absolute inset-0 bg-black/50"></div>
+    </div>
+
+    <div class="relative z-10 text-center px-6 max-w-5xl mx-auto pt-20">
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-8"
+           style="background: rgba(0,160,226,0.1); border: 1px solid rgba(0,160,226,0.3); backdrop-filter: blur(10px);">
+        <i class="fas fa-map-marker-alt text-brand-blue"></i>
+        <span class="font-ui text-sm text-brand-blue">Downtown Gettysburg, PA</span>
+      </div>
+
+      <h1 class="font-display text-6xl md:text-8xl lg:text-9xl tracking-wider mb-6 text-white leading-none drop-shadow-2xl">
+        YOUR ADVENTURE
+        <span class="block gradient-text">AWAITS</span>
+      </h1>
+
+      <p class="font-body text-xl md:text-2xl text-slate-200 max-w-2xl mx-auto mb-10 leading-relaxed drop-shadow-lg">
+        Three immersive escape rooms. 60 minutes each. 
+        <span class="text-white font-semibold">Zero second chances.</span>
+        <br>Think you've got what it takes?
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+        <a href="https://offthecouch.io/book/escapegettysburg" target="_blank" rel="noopener noreferrer" 
+           class="px-10 py-5 rounded-xl font-display text-2xl tracking-wider transition-all hover:scale-105 animate-pulse-glow text-white"
+           style="background: linear-gradient(90deg, #3684bf, #00a0e2);">
+          <i class="fas fa-calendar-alt mr-3"></i>BOOK YOUR ESCAPE
+        </a>
+        <a href="#rooms" class="px-8 py-5 rounded-xl font-display text-xl tracking-wide transition-all hover:scale-105 hover:bg-white/10 text-white"
+           style="border: 2px solid rgba(255,255,255,0.3); backdrop-filter: blur(10px);">
+          <i class="fas fa-play-circle mr-2"></i>SEE OUR ROOMS
+        </a>
+      </div>
+
+      <div class="flex flex-wrap items-center justify-center gap-6 text-slate-300">
+        <div class="flex items-center gap-2">
+          <div class="flex text-amber-400">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <span class="font-ui text-sm">5-Star Rated</span>
+        </div>
+        <div class="w-px h-4 bg-slate-500"></div>
+        <div class="flex items-center gap-2">
+          <i class="fas fa-user-shield text-brand-blue"></i>
+          <span class="font-ui text-sm">Private Games Only</span>
+        </div>
+        <div class="w-px h-4 bg-slate-500"></div>
+        <div class="flex items-center gap-2">
+          <i class="fas fa-users text-green-400"></i>
+          <span class="font-ui text-sm">All Skill Levels</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce z-10">
+      <i class="fas fa-chevron-down text-2xl text-slate-400"></i>
+    </div>
+  </section>
+
+  <!-- Rooms Section -->
+  <section id="rooms" class="py-24 px-6 overflow-hidden" style="background: #0A0A0B;">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="font-display text-5xl md:text-7xl tracking-wider mb-4 text-white">
+          CHOOSE YOUR <span class="gradient-text">ADVENTURE</span>
+        </h2>
+        <p class="font-body text-xl text-slate-400 max-w-2xl mx-auto">
+          Three unique challenges. Three unforgettable experiences. Which will you conquer first?
+        </p>
+      </div>
+
+      <!-- Carousel -->
+      <div class="relative h-[450px] md:h-[400px] flex items-center justify-center mb-8 overflow-hidden">
+        
+        <!-- Room Card 1: Heist -->
+        <article class="carousel-card absolute w-[85%] max-w-2xl cursor-pointer transition-all duration-500 ease-out" data-index="0">
+          <div class="relative rounded-3xl overflow-hidden card-inner" style="box-shadow: 0 20px 40px rgba(0,0,0,0.5); border: 3px solid rgba(0,0,0,0.6);">
+            <div class="absolute inset-0">
+              <img src="/images/heist.png" alt="Heist of the Gettysburg Address Escape Room" class="w-full h-full object-cover">
+            </div>
+            <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.7) 40%, rgba(0,0,0,0.4) 100%);"></div>
+            
+            <div class="relative aspect-[4/3] md:aspect-[16/10]">
+              <div class="absolute bottom-0 left-0 right-0 p-6 md:p-10 z-10">
+                <h3 class="font-display text-3xl md:text-5xl tracking-wide mb-3 text-white drop-shadow-lg">
+                  HEIST OF THE GETTYSBURG ADDRESS
+                </h3>
+                <p class="font-body text-base md:text-lg text-white/90 mb-5 max-w-2xl drop-shadow-md">
+                  The most famous speech in American history sits behind reinforced glass. Your crew has one shot to pull off the impossible heist.
+                </p>
+                <div class="flex flex-wrap items-center gap-2 md:gap-3 mb-5">
+                  <span class="flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm font-ui text-white" style="background: rgba(0,160,226,0.3); border: 1px solid rgba(0,160,226,0.4);">
+                    <i class="fas fa-clock text-brand-blue"></i> 60 MIN
+                  </span>
+                  <span class="flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm font-ui text-white" style="background: rgba(0,160,226,0.3); border: 1px solid rgba(0,160,226,0.4);">
+                    <i class="fas fa-users text-brand-blue"></i> 2-8
+                  </span>
+                  <span class="flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm font-ui text-white" style="background: rgba(0,160,226,0.3); border: 1px solid rgba(0,160,226,0.4);">
+                    <i class="fas fa-puzzle-piece text-brand-blue"></i> 5/10
+                  </span>
+                  <span class="flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm font-ui text-white" style="background: rgba(0,160,226,0.3); border: 1px solid rgba(0,160,226,0.4);">
+                    <i class="fas fa-trophy text-brand-blue"></i> 70%
+                  </span>
+                </div>
+                <a href="https://offthecouch.io/book/escapegettysburg" target="_blank" rel="noopener noreferrer" 
+                   class="book-btn hidden px-8 py-3 rounded-xl font-display text-xl tracking-wide transition-all hover:scale-105 text-white"
+                   style="background: linear-gradient(90deg, #3684bf, #00a0e2); box-shadow: 0 0 30px rgba(0,160,226,0.4);">
+                  BOOK THIS ROOM
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Room Card 2: Mad Hatter -->
+        <article class="carousel-card absolute w-[85%] max-w-2xl cursor-pointer transition-all duration-500 ease-out" data-index="1">
+          <div class="relative rounded-3xl overflow-hidden card-inner" style="box-shadow: 0 20px 40px rgba(0,0,0,0.5); border: 3px solid rgba(0,0,0,0.6);">
+            <div class="absolute inset-0">
+              <img src="/images/madhatter.png" alt="The Mad Hatter Escape Room" class="w-full h-full object-cover">
+            </div>
+            <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.7) 40%, rgba(0,0,0,0.4) 100%);"></div>
+            
+            <div class="relative aspect-[4/3] md:aspect-[16/10]">
+              <div class="absolute bottom-0 left-0 right-0 p-6 md:p-10 z-10">
+                <h3 class="font-display text-3xl md:text-5xl tracking-wide mb-3 text-white drop-shadow-lg">
+                  THE MAD HATTER
+                </h3>
+                <p class="font-body text-base md:text-lg text-white/90 mb-5 max-w-2xl drop-shadow-md">
+                  Trapped in a twisted wonderland, you must solve the Queen's puzzles before the dream becomes a nightmare.
+                </p>
+                <div class="flex flex-wrap items-center gap-2 md:gap-3 mb-5">
+                  <span class="flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm font-ui text-white" style="background: rgba(0,160,226,0.3); border: 1px solid rgba(0,160,226,0.4);">
+                    <i class="fas fa-clock text-brand-blue"></i> 60 MIN
+                  </span>
+                  <span class="flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm font-ui text-white" style="background: rgba(0,160,226,0.3); border: 1px solid rgba(0,160,226,0.4);">
+                    <i class="fas fa-users text-brand-blue"></i> 2-8
+                  </span>
+                  <span class="flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm font-ui text-white" style="background: rgba(0,160,226,0.3); border: 1px solid rgba(0,160,226,0.4);">
+                    <i class="fas fa-puzzle-piece text-brand-blue"></i> 6/10
+                  </span>
+                  <span class="flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm font-ui text-white" style="background: rgba(0,160,226,0.3); border: 1px solid rgba(0,160,226,0.4);">
+                    <i class="fas fa-trophy text-brand-blue"></i> 50%
+                  </span>
+                </div>
+                <a href="https://offthecouch.io/book/escapegettysburg" target="_blank" rel="noopener noreferrer" 
+                   class="book-btn hidden px-8 py-3 rounded-xl font-display text-xl tracking-wide transition-all hover:scale-105 text-white"
+                   style="background: linear-gradient(90deg, #3684bf, #00a0e2); box-shadow: 0 0 30px rgba(0,160,226,0.4);">
+                  BOOK THIS ROOM
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Room Card 3: Houdini -->
+        <article class="carousel-card absolute w-[85%] max-w-2xl cursor-pointer transition-all duration-500 ease-out" data-index="2">
+          <div class="relative rounded-3xl overflow-hidden card-inner" style="box-shadow: 0 20px 40px rgba(0,0,0,0.5); border: 3px solid rgba(0,0,0,0.6);">
+            <div class="absolute inset-0">
+              <img src="/images/houdini.png" alt="Houdini's Workshop Escape Room" class="w-full h-full object-cover">
+            </div>
+            <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.7) 40%, rgba(0,0,0,0.4) 100%);"></div>
+            
+            <div class="relative aspect-[4/3] md:aspect-[16/10]">
+              <div class="absolute bottom-0 left-0 right-0 p-6 md:p-10 z-10">
+                <h3 class="font-display text-3xl md:text-5xl tracking-wide mb-3 text-white drop-shadow-lg">
+                  HOUDINI'S WORKSHOP
+                </h3>
+                <p class="font-body text-base md:text-lg text-white/90 mb-5 max-w-2xl drop-shadow-md">
+                  The master illusionist left behind his greatest secrets. Can you escape before the final curtain falls?
+                </p>
+                <div class="flex flex-wrap items-center gap-2 md:gap-3 mb-5">
+                  <span class="flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm font-ui text-white" style="background: rgba(0,160,226,0.3); border: 1px solid rgba(0,160,226,0.4);">
+                    <i class="fas fa-clock text-brand-blue"></i> 60 MIN
+                  </span>
+                  <span class="flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm font-ui text-white" style="background: rgba(0,160,226,0.3); border: 1px solid rgba(0,160,226,0.4);">
+                    <i class="fas fa-users text-brand-blue"></i> 2-8
+                  </span>
+                  <span class="flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm font-ui text-white" style="background: rgba(0,160,226,0.3); border: 1px solid rgba(0,160,226,0.4);">
+                    <i class="fas fa-puzzle-piece text-brand-blue"></i> 8/10
+                  </span>
+                  <span class="flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm font-ui text-white" style="background: rgba(0,160,226,0.3); border: 1px solid rgba(0,160,226,0.4);">
+                    <i class="fas fa-trophy text-brand-blue"></i> 40%
+                  </span>
+                </div>
+                <a href="https://offthecouch.io/book/escapegettysburg" target="_blank" rel="noopener noreferrer" 
+                   class="book-btn hidden px-8 py-3 rounded-xl font-display text-xl tracking-wide transition-all hover:scale-105 text-white"
+                   style="background: linear-gradient(90deg, #3684bf, #00a0e2); box-shadow: 0 0 30px rgba(0,160,226,0.4);">
+                  BOOK THIS ROOM
+                </a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Navigation -->
+        <button id="prevBtn" class="absolute left-2 md:left-8 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full flex items-center justify-center transition-all hover:scale-110 z-20"
+                style="background: rgba(0,0,0,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);">
+          <i class="fas fa-chevron-left text-lg text-white"></i>
+        </button>
+        <button id="nextBtn" class="absolute right-2 md:right-8 top-1/2 -translate-y-1/2 w-12 h-12 rounded-full flex items-center justify-center transition-all hover:scale-110 z-20"
+                style="background: rgba(0,0,0,0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.2);">
+          <i class="fas fa-chevron-right text-lg text-white"></i>
+        </button>
+      </div>
+
+      <!-- Dots -->
+      <div class="flex justify-center gap-3">
+        <button class="carousel-dot h-2 w-10 rounded-full bg-brand-blue transition-all" data-index="0"></button>
+        <button class="carousel-dot h-2 w-2 rounded-full bg-slate-600 hover:bg-slate-500 transition-all" data-index="1"></button>
+        <button class="carousel-dot h-2 w-2 rounded-full bg-slate-600 hover:bg-slate-500 transition-all" data-index="2"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section id="about" class="py-24 px-6" style="background: linear-gradient(180deg, #0A0A0B 0%, #0F172A 100%);">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="font-display text-5xl md:text-7xl tracking-wider mb-4 text-white">
+          HOW IT <span class="gradient-text">WORKS</span>
+        </h2>
+        <p class="font-body text-xl text-slate-400">First time? No problem. Here's everything you need to know.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="relative group">
+          <div class="text-center p-8 rounded-2xl transition-all group-hover:scale-105 h-full"
+               style="background: rgba(0,160,226,0.05); border: 1px solid rgba(0,160,226,0.1);">
+            <div class="w-20 h-20 mx-auto mb-6 rounded-2xl flex items-center justify-center"
+                 style="background: linear-gradient(135deg, rgba(0,160,226,0.2), rgba(0,160,226,0.1));">
+              <i class="fas fa-calendar-check text-3xl text-brand-blue"></i>
+            </div>
+            <div class="font-display text-4xl text-brand-blue mb-2">01</div>
+            <h3 class="font-display text-2xl tracking-wide mb-3 text-white">BOOK ONLINE</h3>
+            <p class="font-body text-slate-400">Pick your room, choose your time, and reserve your adventure.</p>
+          </div>
+        </div>
+
+        <div class="relative group">
+          <div class="text-center p-8 rounded-2xl transition-all group-hover:scale-105 h-full"
+               style="background: rgba(0,160,226,0.05); border: 1px solid rgba(0,160,226,0.1);">
+            <div class="w-20 h-20 mx-auto mb-6 rounded-2xl flex items-center justify-center"
+                 style="background: linear-gradient(135deg, rgba(0,160,226,0.2), rgba(0,160,226,0.1));">
+              <i class="fas fa-users text-3xl text-brand-blue"></i>
+            </div>
+            <div class="font-display text-4xl text-brand-blue mb-2">02</div>
+            <h3 class="font-display text-2xl tracking-wide mb-3 text-white">GATHER YOUR CREW</h3>
+            <p class="font-body text-slate-400">Bring 2-8 of your sharpest friends, family, or coworkers.</p>
+          </div>
+        </div>
+
+        <div class="relative group">
+          <div class="text-center p-8 rounded-2xl transition-all group-hover:scale-105 h-full"
+               style="background: rgba(0,160,226,0.05); border: 1px solid rgba(0,160,226,0.1);">
+            <div class="w-20 h-20 mx-auto mb-6 rounded-2xl flex items-center justify-center"
+                 style="background: linear-gradient(135deg, rgba(0,160,226,0.2), rgba(0,160,226,0.1));">
+              <i class="fas fa-door-open text-3xl text-brand-blue"></i>
+            </div>
+            <div class="font-display text-4xl text-brand-blue mb-2">03</div>
+            <h3 class="font-display text-2xl tracking-wide mb-3 text-white">GET BRIEFED</h3>
+            <p class="font-body text-slate-400">Your game master sets the scene and explains the rules.</p>
+          </div>
+        </div>
+
+        <div class="relative group">
+          <div class="text-center p-8 rounded-2xl transition-all group-hover:scale-105 h-full"
+               style="background: rgba(0,160,226,0.05); border: 1px solid rgba(0,160,226,0.1);">
+            <div class="w-20 h-20 mx-auto mb-6 rounded-2xl flex items-center justify-center"
+                 style="background: linear-gradient(135deg, rgba(0,160,226,0.2), rgba(0,160,226,0.1));">
+              <i class="fas fa-clock text-3xl text-brand-blue"></i>
+            </div>
+            <div class="font-display text-4xl text-brand-blue mb-2">04</div>
+            <h3 class="font-display text-2xl tracking-wide mb-3 text-white">BEAT THE CLOCK</h3>
+            <p class="font-body text-slate-400">60 minutes to solve puzzles, crack codes, and escape!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Perfect For -->
+  <section class="py-24 px-6" style="background: #0A0A0B;">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="font-display text-5xl md:text-7xl tracking-wider mb-4 text-white">
+          PERFECT <span class="gradient-text">FOR</span>
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="p-6 rounded-2xl transition-all hover:scale-105 group" style="background: rgba(15,23,42,0.5); border: 1px solid rgba(255,255,255,0.05);">
+          <div class="flex items-start gap-4">
+            <div class="w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg, rgba(0,160,226,0.2), rgba(0,160,226,0.1));">
+              <i class="fas fa-users text-xl text-brand-blue"></i>
+            </div>
+            <div>
+              <h3 class="font-display text-2xl tracking-wide mb-2 text-white group-hover:text-brand-blue transition-colors">Friends & Family</h3>
+              <p class="font-body text-slate-400">Create memories that last longer than any photo.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-2xl transition-all hover:scale-105 group" style="background: rgba(15,23,42,0.5); border: 1px solid rgba(255,255,255,0.05);">
+          <div class="flex items-start gap-4">
+            <div class="w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg, rgba(0,160,226,0.2), rgba(0,160,226,0.1));">
+              <i class="fas fa-heart text-xl text-brand-blue"></i>
+            </div>
+            <div>
+              <h3 class="font-display text-2xl tracking-wide mb-2 text-white group-hover:text-brand-blue transition-colors">Date Night</h3>
+              <p class="font-body text-slate-400">Skip the boring dinner. Do something unforgettable.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-2xl transition-all hover:scale-105 group" style="background: rgba(15,23,42,0.5); border: 1px solid rgba(255,255,255,0.05);">
+          <div class="flex items-start gap-4">
+            <div class="w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg, rgba(0,160,226,0.2), rgba(0,160,226,0.1));">
+              <i class="fas fa-building text-xl text-brand-blue"></i>
+            </div>
+            <div>
+              <h3 class="font-display text-2xl tracking-wide mb-2 text-white group-hover:text-brand-blue transition-colors">Team Building</h3>
+              <p class="font-body text-slate-400">Watch your team communicate like never before.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-2xl transition-all hover:scale-105 group" style="background: rgba(15,23,42,0.5); border: 1px solid rgba(255,255,255,0.05);">
+          <div class="flex items-start gap-4">
+            <div class="w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg, rgba(0,160,226,0.2), rgba(0,160,226,0.1));">
+              <i class="fas fa-birthday-cake text-xl text-brand-blue"></i>
+            </div>
+            <div>
+              <h3 class="font-display text-2xl tracking-wide mb-2 text-white group-hover:text-brand-blue transition-colors">Celebrations</h3>
+              <p class="font-body text-slate-400">Birthdays, bachelor parties, reunions — we've got you.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-2xl transition-all hover:scale-105 group" style="background: rgba(15,23,42,0.5); border: 1px solid rgba(255,255,255,0.05);">
+          <div class="flex items-start gap-4">
+            <div class="w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg, rgba(0,160,226,0.2), rgba(0,160,226,0.1));">
+              <i class="fas fa-suitcase text-xl text-brand-blue"></i>
+            </div>
+            <div>
+              <h3 class="font-display text-2xl tracking-wide mb-2 text-white group-hover:text-brand-blue transition-colors">Tourists</h3>
+              <p class="font-body text-slate-400">The perfect Gettysburg adventure beyond the battlefield.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-2xl transition-all hover:scale-105 group" style="background: rgba(15,23,42,0.5); border: 1px solid rgba(255,255,255,0.05);">
+          <div class="flex items-start gap-4">
+            <div class="w-14 h-14 rounded-xl flex items-center justify-center flex-shrink-0" style="background: linear-gradient(135deg, rgba(0,160,226,0.2), rgba(0,160,226,0.1));">
+              <i class="fas fa-gamepad text-xl text-brand-blue"></i>
+            </div>
+            <div>
+              <h3 class="font-display text-2xl tracking-wide mb-2 text-white group-hover:text-brand-blue transition-colors">Puzzle Lovers</h3>
+              <p class="font-body text-slate-400">Think you're good? Prove it against the clock.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="py-24 px-6" style="background: linear-gradient(180deg, #0F172A 0%, #0A0A0B 100%);">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="font-display text-5xl md:text-7xl tracking-wider mb-4 text-white">
+          WHAT <span class="gradient-text">ESCAPEES</span> SAY
+        </h2>
+      </div>
+
+      <div class="flex flex-col items-center mb-12">
+        <div class="flex items-center gap-4 p-6 rounded-2xl" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);">
+          <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_light_color_92x30dp.png" alt="Google" class="h-8 object-contain">
+          <div class="w-px h-12 bg-slate-700"></div>
+          <div class="text-center">
+            <div class="flex items-center gap-2">
+              <span class="font-display text-4xl text-white">4.9</span>
+              <div class="flex text-amber-400">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+            </div>
+            <p class="font-ui text-sm text-slate-400">Based on 150+ reviews</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="p-6 rounded-2xl" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-full flex items-center justify-center font-ui font-semibold text-white" style="background: linear-gradient(135deg, #4285F4, #34A853);">S</div>
+            <div class="flex-grow">
+              <p class="font-ui font-medium text-white">Sarah M.</p>
+              <p class="font-ui text-xs text-slate-500">2 weeks ago</p>
+            </div>
+          </div>
+          <div class="flex gap-0.5 mb-3">
+            <i class="fas fa-star text-amber-400 text-sm"></i><i class="fas fa-star text-amber-400 text-sm"></i><i class="fas fa-star text-amber-400 text-sm"></i><i class="fas fa-star text-amber-400 text-sm"></i><i class="fas fa-star text-amber-400 text-sm"></i>
+          </div>
+          <p class="font-body text-slate-300 leading-relaxed">Best escape room we've ever done! The puzzles were clever without being frustrating. Our game master was super helpful.</p>
+        </div>
+
+        <div class="p-6 rounded-2xl" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-full flex items-center justify-center font-ui font-semibold text-white" style="background: linear-gradient(135deg, #4285F4, #34A853);">M</div>
+            <div class="flex-grow">
+              <p class="font-ui font-medium text-white">Mike R.</p>
+              <p class="font-ui text-xs text-slate-500">4 months ago</p>
+            </div>
+          </div>
+          <div class="flex gap-0.5 mb-3">
+            <i class="fas fa-star text-amber-400 text-sm"></i><i class="fas fa-star text-amber-400 text-sm"></i><i class="fas fa-star text-amber-400 text-sm"></i><i class="fas fa-star text-amber-400 text-sm"></i><i class="fas fa-star text-amber-400 text-sm"></i>
+          </div>
+          <p class="font-body text-slate-300 leading-relaxed">Our team building event was a huge hit. Everyone's still talking about it! Already planning our next visit.</p>
+        </div>
+
+        <div class="p-6 rounded-2xl" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-full flex items-center justify-center font-ui font-semibold text-white" style="background: linear-gradient(135deg, #4285F4, #34A853);">J</div>
+            <div class="flex-grow">
+              <p class="font-ui font-medium text-white">Jennifer L.</p>
+              <p class="font-ui text-xs text-slate-500">8 months ago</p>
+            </div>
+          </div>
+          <div class="flex gap-0.5 mb-3">
+            <i class="fas fa-star text-amber-400 text-sm"></i><i class="fas fa-star text-amber-400 text-sm"></i><i class="fas fa-star text-amber-400 text-sm"></i><i class="fas fa-star text-amber-400 text-sm"></i><i class="fas fa-star text-amber-400 text-sm"></i>
+          </div>
+          <p class="font-body text-slate-300 leading-relaxed">The Gettysburg Address room was incredible. So unique! My family escaped with 3 minutes to spare!</p>
+        </div>
+      </div>
+
+      <div class="text-center mt-10">
+        <a href="https://www.google.com/search?q=escape+gettysburg+reviews" target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-ui text-sm transition-all hover:scale-105"
+           style="background: rgba(66,133,244,0.1); border: 1px solid rgba(66,133,244,0.3); color: #8AB4F8;">
+          <i class="fab fa-google"></i> Read all reviews on Google <i class="fas fa-external-link-alt text-xs"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-24 px-6 relative overflow-hidden" style="background: linear-gradient(135deg, #3684bf 0%, #00a0e2 100%);">
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute top-0 left-0 w-full h-full" style="background-image: radial-gradient(circle at 20% 50%, white 1px, transparent 1px); background-size: 50px 50px;"></div>
+    </div>
+    
+    <div class="max-w-4xl mx-auto text-center relative z-10">
+      <h2 class="font-display text-5xl md:text-7xl tracking-wider mb-6 text-white">READY TO ESCAPE?</h2>
+      <p class="font-body text-xl text-white/80 mb-10 max-w-2xl mx-auto">Book now and lock in your adventure. Spots fill up fast — especially on weekends!</p>
+      <a href="https://offthecouch.io/book/escapegettysburg" target="_blank" rel="noopener noreferrer" 
+         class="inline-block px-12 py-6 rounded-xl font-display text-3xl tracking-wider transition-all hover:scale-105 bg-white text-slate-900 shadow-2xl">
+        <i class="fas fa-bolt mr-3"></i>BOOK NOW
+      </a>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-24 px-6" style="background: #0A0A0B;">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid lg:grid-cols-2 gap-16">
+        <div>
+          <h2 class="font-display text-5xl tracking-wider mb-6 text-white">FIND <span class="gradient-text">US</span></h2>
+          <address class="not-italic space-y-6">
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style="background: rgba(0,160,226,0.2);">
+                <i class="fas fa-map-marker-alt text-brand-blue"></i>
+              </div>
+              <div>
+                <h3 class="font-display text-xl tracking-wide text-white mb-1">ADDRESS</h3>
+                <p class="font-body text-slate-400">59 N. 5th Street<br>Gettysburg, PA 17325</p>
+              </div>
+            </div>
+            
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style="background: rgba(0,160,226,0.2);">
+                <i class="fas fa-phone text-brand-blue"></i>
+              </div>
+              <div>
+                <h3 class="font-display text-xl tracking-wide text-white mb-1">PHONE</h3>
+                <a href="tel:7177695397" class="font-body text-brand-blue hover:text-white transition-colors text-lg">(717) 769-5397</a>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style="background: rgba(0,160,226,0.2);">
+                <i class="fas fa-clock text-brand-blue"></i>
+              </div>
+              <div>
+                <h3 class="font-display text-xl tracking-wide text-white mb-1">HOURS</h3>
+                <div class="font-body text-slate-400 space-y-1">
+                  <p>Mon - Tue: <span class="text-slate-500">Closed</span></p>
+                  <p>Wed - Fri: <span class="text-white">4pm - 9pm</span></p>
+                  <p>Saturday: <span class="text-white">12pm - 9pm</span></p>
+                  <p>Sunday: <span class="text-white">1pm - 6pm</span></p>
+                </div>
+              </div>
+            </div>
+          </address>
+
+          <div class="flex gap-4 mt-8">
+            <a href="https://instagram.com/escapegettysburg" target="_blank" rel="noopener noreferrer" aria-label="Instagram"
+               class="w-14 h-14 rounded-xl flex items-center justify-center transition-all hover:scale-110"
+               style="background: linear-gradient(135deg, #E1306C, #833AB4);">
+              <i class="fab fa-instagram text-2xl text-white"></i>
+            </a>
+            <a href="https://facebook.com/escapegettysburg" target="_blank" rel="noopener noreferrer" aria-label="Facebook"
+               class="w-14 h-14 rounded-xl flex items-center justify-center transition-all hover:scale-110" style="background: #1877F2;">
+              <i class="fab fa-facebook text-2xl text-white"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="rounded-2xl overflow-hidden h-80 lg:h-auto" style="background: rgba(15,23,42,0.5); border: 1px solid rgba(255,255,255,0.1);">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3072.8!2d-77.2311!3d39.8301!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMznCsDQ5JzQ4LjQiTiA3N8KwMTMnNTIuMCJX!5e0!3m2!1sen!2sus!4v1234567890"
+                  width="100%" height="100%" style="border: 0; filter: invert(90%) hue-rotate(180deg);" allowfullscreen="" loading="lazy" title="Escape Gettysburg Location"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-12 px-6 border-t border-white/10" style="background: #0A0A0B;">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        <a href="/" class="flex items-center">
+          <img src="/images/title_logo.png" alt="Escape Gettysburg" class="h-10 w-auto">
+        </a>
+        
+        <nav class="flex flex-wrap items-center justify-center gap-6 text-sm font-ui text-slate-500">
+          <a href="waivers.html" class="hover:text-white transition-colors">Waivers</a>
+          <a href="faq.html" class="hover:text-white transition-colors">FAQ</a>
+          <a href="private-events.html" class="hover:text-white transition-colors">Private Events</a>
+        </nav>
+
+        <p class="font-ui text-sm text-slate-500">© 2016-2025 Escape Gettysburg</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    // Mobile Menu
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    let menuOpen = false;
+
+    mobileMenuBtn.addEventListener('click', () => {
+      menuOpen = !menuOpen;
+      mobileMenu.classList.toggle('hidden');
+      mobileMenuBtn.innerHTML = menuOpen ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+    });
+
+    // Navbar Scroll
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.style.background = 'rgba(10,10,11,0.95)';
+        navbar.style.backdropFilter = 'blur(20px)';
+        navbar.style.borderBottom = '1px solid rgba(255,255,255,0.1)';
+        navbar.classList.remove('py-3');
+        navbar.classList.add('py-2');
+      } else {
+        navbar.style.background = 'transparent';
+        navbar.style.backdropFilter = 'none';
+        navbar.style.borderBottom = 'none';
+        navbar.classList.remove('py-2');
+        navbar.classList.add('py-3');
+      }
+    });
+
+    // Carousel
+    const cards = document.querySelectorAll('.carousel-card');
+    const dots = document.querySelectorAll('.carousel-dot');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    let currentIndex = 0;
+    let autoPlayInterval;
+
+    function updateCarousel() {
+      cards.forEach((card, index) => {
+        const diff = index - currentIndex;
+        const isActive = diff === 0;
+        const isLeft = diff === -1 || (currentIndex === 0 && index === cards.length - 1);
+        const isRight = diff === 1 || (currentIndex === cards.length - 1 && index === 0);
+        
+        const inner = card.querySelector('.card-inner');
+        const bookBtn = card.querySelector('.book-btn');
+        
+        if (isActive) {
+          card.style.transform = 'translateX(0) scale(1)';
+          card.style.opacity = '1';
+          card.style.zIndex = '10';
+          card.style.filter = 'brightness(1)';
+          inner.style.boxShadow = '0 0 50px 5px rgba(0,160,226,0.4), 0 0 100px 10px rgba(0,160,226,0.2)';
+          inner.style.border = '3px solid rgba(0,0,0,0.8)';
+          inner.style.outline = '2px solid rgba(0,160,226,0.5)';
+          bookBtn.classList.remove('hidden');
+          bookBtn.classList.add('inline-block');
+        } else if (isLeft) {
+          card.style.transform = 'translateX(-70%) scale(0.8)';
+          card.style.opacity = '0.5';
+          card.style.zIndex = '5';
+          card.style.filter = 'brightness(0.4)';
+          inner.style.boxShadow = '0 20px 40px rgba(0,0,0,0.5)';
+          inner.style.border = '3px solid rgba(0,0,0,0.6)';
+          inner.style.outline = 'none';
+          bookBtn.classList.add('hidden');
+        } else if (isRight) {
+          card.style.transform = 'translateX(70%) scale(0.8)';
+          card.style.opacity = '0.5';
+          card.style.zIndex = '5';
+          card.style.filter = 'brightness(0.4)';
+          inner.style.boxShadow = '0 20px 40px rgba(0,0,0,0.5)';
+          inner.style.border = '3px solid rgba(0,0,0,0.6)';
+          inner.style.outline = 'none';
+          bookBtn.classList.add('hidden');
+        } else {
+          card.style.transform = 'translateX(0) scale(0.7)';
+          card.style.opacity = '0';
+          card.style.zIndex = '0';
+          bookBtn.classList.add('hidden');
+        }
+      });
+
+      dots.forEach((dot, index) => {
+        if (index === currentIndex) {
+          dot.classList.remove('w-2', 'bg-slate-600');
+          dot.classList.add('w-10', 'bg-brand-blue');
+        } else {
+          dot.classList.remove('w-10', 'bg-brand-blue');
+          dot.classList.add('w-2', 'bg-slate-600');
+        }
+      });
+    }
+
+    function goToSlide(index) {
+      currentIndex = index;
+      updateCarousel();
+      resetAutoPlay();
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % cards.length;
+      updateCarousel();
+    }
+
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+      updateCarousel();
+    }
+
+    function startAutoPlay() {
+      autoPlayInterval = setInterval(nextSlide, 5000);
+    }
+
+    function resetAutoPlay() {
+      clearInterval(autoPlayInterval);
+      startAutoPlay();
+    }
+
+    prevBtn.addEventListener('click', () => { prevSlide(); resetAutoPlay(); });
+    nextBtn.addEventListener('click', () => { nextSlide(); resetAutoPlay(); });
+    
+    cards.forEach((card, index) => {
+      card.addEventListener('click', () => goToSlide(index));
+    });
+
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => goToSlide(index));
+    });
+
+    updateCarousel();
+    startAutoPlay();
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+          if (menuOpen) {
+            menuOpen = false;
+            mobileMenu.classList.add('hidden');
+            mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+          }
+        }
+      });
+    });
+  </script>
 </body>
 </html>
