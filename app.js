@@ -82,6 +82,7 @@ function Navigation() {
         <div className="hidden md:flex items-center gap-8">
           <a href="#rooms" className="font-body text-sm text-slate-300 hover:text-white transition-colors">Our Rooms</a>
           <a href="#about" className="font-body text-sm text-slate-300 hover:text-white transition-colors">How It Works</a>
+          <a href="private-events.html" className="font-body text-sm text-slate-300 hover:text-white transition-colors">Private Events</a>
           <a href="faq.html" className="font-body text-sm text-slate-300 hover:text-white transition-colors">FAQ</a>
           <a href="#contact" className="font-body text-sm text-slate-300 hover:text-white transition-colors">Contact</a>
           <a href="tel:7177695397" className="font-body text-sm text-brand-blue hover:text-brand-blue transition-colors flex items-center gap-2">
@@ -103,6 +104,7 @@ function Navigation() {
           <div className="flex flex-col gap-4">
             <a href="#rooms" className="font-body text-lg text-white py-2">Our Rooms</a>
             <a href="#about" className="font-body text-lg text-white py-2">How It Works</a>
+            <a href="private-events.html" className="font-body text-lg text-white py-2">Private Events</a>
             <a href="faq.html" className="font-body text-lg text-white py-2">FAQ</a>
             <a href="#contact" className="font-body text-lg text-white py-2">Contact</a>
             <a href="tel:7177695397" className="font-body text-lg text-brand-blue py-2">
