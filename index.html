@@ -167,7 +167,8 @@
   <section class="min-h-screen flex items-center justify-center relative overflow-hidden">
     <!-- Video Background -->
     <!-- PROMO: Bunker preview video (The Final Hour). To revert, swap src back to /videos/hero.mp4 -->
-    <div class="absolute inset-0 z-0">
+    <!-- Container extends 20vh above to give the parallax scroll room without exposing a gap. -->
+    <div id="heroParallax" class="absolute left-0 right-0 z-0" style="top: -20vh; height: 120vh; overflow: hidden; will-change: transform;">
       <video autoplay muted loop playsinline class="hero-video w-full h-full object-cover">
         <source src="/videos/bunker-preview-video.mp4" type="video/mp4">
       </video>
@@ -994,6 +995,30 @@
         }
       });
     });
+
+    // Hero Parallax — subtle scroll-linked movement on the background video.
+    // Respects prefers-reduced-motion. Uses requestAnimationFrame for 60fps smoothness.
+    const heroParallax = document.getElementById('heroParallax');
+    if (heroParallax && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      const parallaxRate = 0.25; // 0 = no parallax, 1 = fixed background. 0.25 is a "slight" effect.
+      let parallaxTicking = false;
+
+      function updateParallax() {
+        const scrollY = window.scrollY;
+        const heroHeight = window.innerHeight * 1.2; // stop updating once user scrolls well past hero
+        if (scrollY < heroHeight) {
+          heroParallax.style.transform = `translate3d(0, ${scrollY * parallaxRate}px, 0)`;
+        }
+        parallaxTicking = false;
+      }
+
+      window.addEventListener('scroll', () => {
+        if (!parallaxTicking) {
+          window.requestAnimationFrame(updateParallax);
+          parallaxTicking = true;
+        }
+      }, { passive: true });
+    }
   </script>
 </body>
 </html>
