@@ -166,9 +166,10 @@
   <!-- Hero Section -->
   <section class="min-h-screen flex items-center justify-center relative overflow-hidden">
     <!-- Video Background -->
+    <!-- PROMO: Bunker preview video (The Final Hour). To revert, swap src back to /videos/hero.mp4 -->
     <div class="absolute inset-0 z-0">
       <video autoplay muted loop playsinline class="hero-video w-full h-full object-cover">
-        <source src="/videos/hero.mp4" type="video/mp4">
+        <source src="/videos/bunker-preview-video.mp4" type="video/mp4">
       </video>
       <div class="film-grain"></div>
       <div class="scanlines"></div>
@@ -178,6 +179,72 @@
     </div>
 
     <div class="relative z-10 text-center px-6 max-w-5xl mx-auto pt-20">
+
+      <!-- ========================================================== -->
+      <!-- PROMO HERO: The Final Hour — Cold War Bunker (coming soon)  -->
+      <!-- To revert when the room launches:                            -->
+      <!--   1. Delete this PROMO HERO block (the div below).           -->
+      <!--   2. Uncomment the ORIGINAL HERO block further down.         -->
+      <!--   3. Swap video src in the Video Background section above.   -->
+      <!-- ========================================================== -->
+      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-8"
+           style="background: rgba(239,68,68,0.12); border: 1px solid rgba(239,68,68,0.5); backdrop-filter: blur(10px);">
+        <span class="w-2 h-2 rounded-full animate-pulse" style="background: #ef4444; box-shadow: 0 0 8px #ef4444;"></span>
+        <span class="font-ui text-sm tracking-widest" style="color: #fca5a5;">NEW ROOM &middot; COMING SOON</span>
+      </div>
+
+      <h1 class="font-display text-6xl md:text-8xl lg:text-9xl tracking-wider mb-2 text-white leading-none drop-shadow-2xl">
+        THE FINAL HOUR
+      </h1>
+      <p class="font-display text-2xl md:text-4xl tracking-[0.25em] mb-6 drop-shadow-lg"
+         style="background: linear-gradient(90deg, #ef4444, #f87171); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">
+        COLD WAR BUNKER
+      </p>
+
+      <p class="font-body text-xl md:text-2xl text-slate-200 max-w-2xl mx-auto mb-10 leading-relaxed drop-shadow-lg">
+        A Cuban defector sabotaged an ICBM silo to start a war.
+        <br><span class="text-white font-semibold">You have 60 minutes to stop the launch.</span>
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+        <a href="https://offthecouch.io/book/escapegettysburg" target="_blank" rel="noopener noreferrer"
+           class="px-10 py-5 rounded-xl font-display text-2xl tracking-wider transition-all hover:scale-105 animate-pulse-glow text-white"
+           style="background: linear-gradient(90deg, #3684bf, #00a0e2);">
+          <i class="fas fa-calendar-alt mr-3"></i>BOOK YOUR ESCAPE
+        </a>
+        <a href="#rooms" class="px-8 py-5 rounded-xl font-display text-xl tracking-wide transition-all hover:scale-105 hover:bg-white/10 text-white"
+           style="border: 2px solid rgba(255,255,255,0.3); backdrop-filter: blur(10px);">
+          <i class="fas fa-door-open mr-2"></i>SEE OUR ROOMS
+        </a>
+      </div>
+
+      <div class="flex flex-wrap items-center justify-center gap-6 text-slate-300">
+        <div class="flex items-center gap-2">
+          <div class="flex text-amber-400">
+            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+          </div>
+          <span class="font-ui text-sm">4.8-Star Rated</span>
+        </div>
+        <div class="w-px h-4 bg-slate-500"></div>
+        <div class="flex items-center gap-2">
+          <i class="fas fa-user-shield text-brand-blue"></i>
+          <span class="font-ui text-sm">Private Games Only</span>
+        </div>
+        <div class="w-px h-4 bg-slate-500"></div>
+        <div class="flex items-center gap-2">
+          <i class="fas fa-users text-green-400"></i>
+          <span class="font-ui text-sm">All Skill Levels</span>
+        </div>
+      </div>
+      <!-- ========================================================== -->
+      <!-- END PROMO HERO                                               -->
+      <!-- ========================================================== -->
+
+
+      <!-- ========================================================== -->
+      <!-- ORIGINAL HERO (disabled during promo — uncomment to restore) -->
+      <!-- ========================================================== -->
+      <!--
       <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-8"
            style="background: rgba(0,160,226,0.1); border: 1px solid rgba(0,160,226,0.3); backdrop-filter: blur(10px);">
         <i class="fas fa-map-marker-alt text-brand-blue"></i>
@@ -190,13 +257,13 @@
       </h1>
 
       <p class="font-body text-xl md:text-2xl text-slate-200 max-w-2xl mx-auto mb-10 leading-relaxed drop-shadow-lg">
-        Three immersive escape rooms. 60 minutes each. 
+        Three immersive escape rooms. 60 minutes each.
         <span class="text-white font-semibold">Zero second chances.</span>
         <br>Think you've got what it takes?
       </p>
 
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
-        <a href="https://offthecouch.io/book/escapegettysburg" target="_blank" rel="noopener noreferrer" 
+        <a href="https://offthecouch.io/book/escapegettysburg" target="_blank" rel="noopener noreferrer"
            class="px-10 py-5 rounded-xl font-display text-2xl tracking-wider transition-all hover:scale-105 animate-pulse-glow text-white"
            style="background: linear-gradient(90deg, #3684bf, #00a0e2);">
           <i class="fas fa-calendar-alt mr-3"></i>BOOK YOUR ESCAPE
@@ -225,6 +292,11 @@
           <span class="font-ui text-sm">All Skill Levels</span>
         </div>
       </div>
+      -->
+      <!-- ========================================================== -->
+      <!-- END ORIGINAL HERO                                            -->
+      <!-- ========================================================== -->
+
     </div>
 
     <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce z-10">
