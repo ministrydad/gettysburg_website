@@ -13,8 +13,8 @@
   </script>
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Private Events & Team Building | Escape Gettysburg</title>
-  <meta name="description" content="Host your next team building event or private party at Escape Gettysburg. Up to 30 guests, 3 rooms, dedicated staff. Perfect for corporate events, birthdays, and more.">
+  <title>Waivers | Escape Gettysburg</title>
+  <meta name="description" content="Sign your waiver online before arriving at Escape Gettysburg. Quick and easy digital waiver for all participants.">
   
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="/favicon.ico">
@@ -33,6 +33,16 @@
   
   <!-- Custom Styles -->
   <link rel="stylesheet" href="styles.css">
+  
+  <style>
+    #otcContainer {
+      min-height: 300px;
+    }
+    
+    #otcContainer iframe {
+      background: transparent;
+    }
+  </style>
 </head>
 <body style="background: #0A0A0B;">
   
@@ -46,295 +56,86 @@
       <div class="hidden md:flex items-center gap-8">
         <a href="index.html#rooms" class="font-body text-sm text-slate-300 hover:text-white transition-colors">Our Rooms</a>
         <a href="index.html#about" class="font-body text-sm text-slate-300 hover:text-white transition-colors">How It Works</a>
+        <a href="private-events.html" class="font-body text-sm text-slate-300 hover:text-white transition-colors">Private Events</a>
         <a href="faq.html" class="font-body text-sm text-slate-300 hover:text-white transition-colors">FAQ</a>
+        <a href="gift-vouchers.html" class="font-body text-sm text-slate-300 hover:text-white transition-colors">Gift Vouchers</a>
         <a href="index.html#contact" class="font-body text-sm text-slate-300 hover:text-white transition-colors">Contact</a>
         <a href="tel:7177695397" class="font-body text-sm text-brand-blue hover:text-white transition-colors flex items-center gap-2">
           <i class="fas fa-phone"></i> (717) 769-5397
         </a>
-        <a href="https://offthecouch.io/book/escapegettysburg" target="_blank" rel="noopener noreferrer" class="px-6 py-2.5 rounded-xl font-display text-lg tracking-wide transition-all hover:scale-105 text-white"
-                style="background: linear-gradient(90deg, #3684bf, #00a0e2); box-shadow: 0 0 20px rgba(0,160,226,0.3);">
+        <a href="https://offthecouch.io/book/escapegettysburg" target="_blank" rel="noopener noreferrer"
+           class="px-6 py-2.5 rounded-xl font-display text-lg tracking-wide transition-all hover:scale-105 text-white"
+           style="background: linear-gradient(90deg, #3684bf, #00a0e2); box-shadow: 0 0 20px rgba(0,160,226,0.3);">
           BOOK NOW
         </a>
       </div>
 
-      <a href="index.html" class="md:hidden text-white text-sm flex items-center gap-2">
-        <i class="fas fa-arrow-left"></i> Back
-      </a>
+      <button id="mobileMenuBtn" class="md:hidden text-white text-2xl">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden absolute top-full left-0 right-0 p-6" style="background: rgba(10,10,11,0.98);">
+      <div class="flex flex-col gap-4">
+        <a href="index.html#rooms" class="font-body text-lg text-white py-2">Our Rooms</a>
+        <a href="index.html#about" class="font-body text-lg text-white py-2">How It Works</a>
+        <a href="private-events.html" class="font-body text-lg text-white py-2">Private Events</a>
+        <a href="faq.html" class="font-body text-lg text-white py-2">FAQ</a>
+        <a href="gift-vouchers.html" class="font-body text-lg text-white py-2">Gift Vouchers</a>
+        <a href="index.html#contact" class="font-body text-lg text-white py-2">Contact</a>
+        <a href="tel:7177695397" class="font-body text-lg text-brand-blue py-2">
+          <i class="fas fa-phone mr-2"></i>(717) 769-5397
+        </a>
+        <a href="https://offthecouch.io/book/escapegettysburg" target="_blank" rel="noopener noreferrer"
+           class="w-full py-4 rounded-xl font-display text-xl tracking-wide mt-2 text-white text-center block"
+           style="background: linear-gradient(90deg, #3684bf, #00a0e2);">
+          BOOK NOW
+        </a>
+      </div>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <header class="py-16 md:py-24 px-6 text-center" style="background: linear-gradient(180deg, #0F172A 0%, #0A0A0B 100%);">
+  <!-- Page Header -->
+  <header class="py-8 md:py-10 px-6 text-center" style="background: linear-gradient(180deg, #0F172A 0%, #0A0A0B 100%);">
     <div class="max-w-4xl mx-auto">
-      <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6"
-           style="background: rgba(0,160,226,0.1); border: 1px solid rgba(0,160,226,0.3);">
-        <i class="fas fa-users text-brand-blue"></i>
-        <span class="font-ui text-sm text-brand-blue">Groups up to 30</span>
-      </div>
-      <h1 class="font-display text-5xl md:text-7xl tracking-wider mb-4 text-white">
-        PRIVATE EVENTS & <span class="gradient-text">TEAM BUILDING</span>
+      <h1 class="font-display text-5xl md:text-7xl tracking-wider text-white">
+        SIGN YOUR <span class="gradient-text">WAIVER</span>
       </h1>
-      <p class="font-body text-xl text-slate-400 max-w-2xl mx-auto mb-8">
-        Skip the trust falls. Build real teamwork with an experience your group will actually remember.
-      </p>
-      <a href="#inquiry" class="inline-block px-10 py-5 rounded-xl font-display text-2xl tracking-wider transition-all hover:scale-105 text-white"
-         style="background: linear-gradient(90deg, #3684bf, #00a0e2); box-shadow: 0 0 30px rgba(0,160,226,0.3);">
-        <i class="fas fa-envelope mr-3"></i>INQUIRE NOW
-      </a>
     </div>
   </header>
 
-  <!-- What's Included -->
-  <section class="py-16 px-6">
-    <div class="max-w-6xl mx-auto">
-      <h2 class="font-display text-4xl md:text-5xl tracking-wider text-center mb-12 text-white">
-        WHAT'S <span class="gradient-text">INCLUDED</span>
-      </h2>
-      
-      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="p-6 rounded-2xl text-center" style="background: rgba(0,160,226,0.05); border: 1px solid rgba(0,160,226,0.1);">
-          <div class="w-16 h-16 mx-auto mb-4 rounded-2xl flex items-center justify-center"
-               style="background: linear-gradient(135deg, rgba(54,132,191,0.2), rgba(0,160,226,0.1));">
-            <i class="fas fa-users text-2xl text-brand-blue"></i>
-          </div>
-          <h3 class="font-display text-2xl tracking-wide text-white mb-2">UP TO 30 GUESTS</h3>
-          <p class="font-body text-slate-400">Spread across all 3 escape rooms simultaneously</p>
+  <!-- Info Banner -->
+  <div class="px-6 pb-2">
+    <div class="max-w-4xl mx-auto">
+      <div class="flex flex-col md:flex-row items-center justify-center gap-6 py-4 px-6 rounded-xl" style="background: rgba(0,160,226,0.05); border: 1px solid rgba(0,160,226,0.1);">
+        <div class="flex items-center gap-3 text-slate-300">
+          <i class="fas fa-clock text-brand-blue"></i>
+          <span class="font-ui text-sm">Takes less than 2 minutes</span>
         </div>
-        
-        <div class="p-6 rounded-2xl text-center" style="background: rgba(0,160,226,0.05); border: 1px solid rgba(0,160,226,0.1);">
-          <div class="w-16 h-16 mx-auto mb-4 rounded-2xl flex items-center justify-center"
-               style="background: linear-gradient(135deg, rgba(54,132,191,0.2), rgba(0,160,226,0.1));">
-            <i class="fas fa-lock text-2xl text-brand-blue"></i>
-          </div>
-          <h3 class="font-display text-2xl tracking-wide text-white mb-2">PRIVATE FACILITY</h3>
-          <p class="font-body text-slate-400">The entire venue is yours — no strangers</p>
+        <div class="w-px h-4 bg-slate-700 hidden md:block"></div>
+        <div class="flex items-center gap-3 text-slate-300">
+          <i class="fas fa-users text-brand-blue"></i>
+          <span class="font-ui text-sm">One waiver per participant</span>
         </div>
-        
-        <div class="p-6 rounded-2xl text-center" style="background: rgba(0,160,226,0.05); border: 1px solid rgba(0,160,226,0.1);">
-          <div class="w-16 h-16 mx-auto mb-4 rounded-2xl flex items-center justify-center"
-               style="background: linear-gradient(135deg, rgba(54,132,191,0.2), rgba(0,160,226,0.1));">
-            <i class="fas fa-user-tie text-2xl text-brand-blue"></i>
-          </div>
-          <h3 class="font-display text-2xl tracking-wide text-white mb-2">DEDICATED STAFF</h3>
-          <p class="font-body text-slate-400">Game masters for every room, focused on your group</p>
-        </div>
-        
-        <div class="p-6 rounded-2xl text-center" style="background: rgba(0,160,226,0.05); border: 1px solid rgba(0,160,226,0.1);">
-          <div class="w-16 h-16 mx-auto mb-4 rounded-2xl flex items-center justify-center"
-               style="background: linear-gradient(135deg, rgba(54,132,191,0.2), rgba(0,160,226,0.1));">
-            <i class="fas fa-clock text-2xl text-brand-blue"></i>
-          </div>
-          <h3 class="font-display text-2xl tracking-wide text-white mb-2">FLEXIBLE HOURS</h3>
-          <p class="font-body text-slate-400">Available outside normal hours based on availability</p>
+        <div class="w-px h-4 bg-slate-700 hidden md:block"></div>
+        <div class="flex items-center gap-3 text-slate-300">
+          <i class="fas fa-child text-brand-blue"></i>
+          <span class="font-ui text-sm">Parents sign for minors</span>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- Why Escape Rooms -->
-  <section class="py-16 px-6" style="background: linear-gradient(180deg, #0A0A0B 0%, #0F172A 50%, #0A0A0B 100%);">
-    <div class="max-w-6xl mx-auto">
-      <h2 class="font-display text-4xl md:text-5xl tracking-wider text-center mb-4 text-white">
-        WHY <span class="gradient-text">ESCAPE ROOMS?</span>
-      </h2>
-      <p class="font-body text-xl text-slate-400 text-center mb-12 max-w-2xl mx-auto">
-        Real challenges. Real collaboration. Real results.
+      <p class="font-body text-lg text-slate-400 text-center mt-4">
+        Please choose your date, time and room to complete your waiver.
       </p>
-      
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="text-center">
-          <div class="w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center"
-               style="background: linear-gradient(135deg, #283891, #3684bf);">
-            <i class="fas fa-comments text-3xl text-white"></i>
-          </div>
-          <h3 class="font-display text-2xl tracking-wide text-white mb-3">COMMUNICATION</h3>
-          <p class="font-body text-slate-400">Teams must share information quickly and clearly to succeed. No hiding behind screens.</p>
-        </div>
-        
-        <div class="text-center">
-          <div class="w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center"
-               style="background: linear-gradient(135deg, #3684bf, #00a0e2);">
-            <i class="fas fa-puzzle-piece text-3xl text-white"></i>
-          </div>
-          <h3 class="font-display text-2xl tracking-wide text-white mb-3">PROBLEM SOLVING</h3>
-          <p class="font-body text-slate-400">Multiple puzzles require different thinking styles. Everyone contributes.</p>
-        </div>
-        
-        <div class="text-center">
-          <div class="w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center"
-               style="background: linear-gradient(135deg, #00a0e2, #22d3ee);">
-            <i class="fas fa-trophy text-3xl text-white"></i>
-          </div>
-          <h3 class="font-display text-2xl tracking-wide text-white mb-3">SHARED VICTORY</h3>
-          <p class="font-body text-slate-400">Win or lose, you do it together. That bond lasts longer than any PowerPoint.</p>
-        </div>
-      </div>
     </div>
-  </section>
+  </div>
 
-  <!-- Perfect For -->
-  <section class="py-16 px-6">
-    <div class="max-w-6xl mx-auto">
-      <h2 class="font-display text-4xl md:text-5xl tracking-wider text-center mb-12 text-white">
-        PERFECT <span class="gradient-text">FOR</span>
-      </h2>
-      
-      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-        <div class="p-4 rounded-xl text-center transition-all hover:scale-105" style="background: rgba(15,23,42,0.5); border: 1px solid rgba(255,255,255,0.05);">
-          <i class="fas fa-building text-2xl text-brand-blue mb-3"></i>
-          <p class="font-display text-lg text-white tracking-wide">CORPORATE</p>
-        </div>
-        <div class="p-4 rounded-xl text-center transition-all hover:scale-105" style="background: rgba(15,23,42,0.5); border: 1px solid rgba(255,255,255,0.05);">
-          <i class="fas fa-birthday-cake text-2xl text-brand-blue mb-3"></i>
-          <p class="font-display text-lg text-white tracking-wide">BIRTHDAYS</p>
-        </div>
-        <div class="p-4 rounded-xl text-center transition-all hover:scale-105" style="background: rgba(15,23,42,0.5); border: 1px solid rgba(255,255,255,0.05);">
-          <i class="fas fa-glass-cheers text-2xl text-brand-blue mb-3"></i>
-          <p class="font-display text-lg text-white tracking-wide">BACHELOR(ETTE)</p>
-        </div>
-        <div class="p-4 rounded-xl text-center transition-all hover:scale-105" style="background: rgba(15,23,42,0.5); border: 1px solid rgba(255,255,255,0.05);">
-          <i class="fas fa-users text-2xl text-brand-blue mb-3"></i>
-          <p class="font-display text-lg text-white tracking-wide">REUNIONS</p>
-        </div>
-        <div class="p-4 rounded-xl text-center transition-all hover:scale-105" style="background: rgba(15,23,42,0.5); border: 1px solid rgba(255,255,255,0.05);">
-          <i class="fas fa-graduation-cap text-2xl text-brand-blue mb-3"></i>
-          <p class="font-display text-lg text-white tracking-wide">SCHOOL GROUPS</p>
-        </div>
-        <div class="p-4 rounded-xl text-center transition-all hover:scale-105" style="background: rgba(15,23,42,0.5); border: 1px solid rgba(255,255,255,0.05);">
-          <i class="fas fa-church text-2xl text-brand-blue mb-3"></i>
-          <p class="font-display text-lg text-white tracking-wide">YOUTH GROUPS</p>
-        </div>
-      </div>
+  <!-- Waiver Form Container -->
+  <main class="px-6 pb-16 pt-2">
+    <div class="max-w-4xl mx-auto">
+      <div id="otcContainer"></div>
     </div>
-  </section>
-
-  <!-- Inquiry Form -->
-  <section id="inquiry" class="py-16 px-6" style="background: linear-gradient(180deg, #0A0A0B 0%, #0F172A 100%);">
-    <div class="max-w-2xl mx-auto">
-      <h2 class="font-display text-4xl md:text-5xl tracking-wider text-center mb-4 text-white">
-        LET'S <span class="gradient-text">PLAN IT</span>
-      </h2>
-      <p class="font-body text-lg text-slate-400 text-center mb-10">
-        Tell us about your event and we'll get back to you within 24 hours.
-      </p>
-      
-      <!-- Success Message (shows after form submission) -->
-      <div id="successMessage" class="hidden mb-8 p-6 rounded-2xl text-center" style="background: rgba(34,197,94,0.1); border: 1px solid rgba(34,197,94,0.3);">
-        <i class="fas fa-check-circle text-4xl text-green-400 mb-3"></i>
-        <h3 class="font-display text-2xl tracking-wide text-white mb-2">THANK YOU!</h3>
-        <p class="font-body text-slate-300">We've received your inquiry and will be in touch within 24 hours.</p>
-      </div>
-      
-      <form action="https://formsubmit.co/manager@escapegettysburg.com" method="POST" class="space-y-6">
-        <!-- FormSubmit config -->
-        <input type="hidden" name="_next" value="https://escapegettysburg.com/private-events.html?success=true">
-        <input type="hidden" name="_subject" value="New Private Event Inquiry!">
-        <input type="hidden" name="_captcha" value="false">
-        
-        <div class="grid md:grid-cols-2 gap-6">
-          <div>
-            <label class="block font-ui text-sm text-slate-400 mb-2">Your Name *</label>
-            <input type="text" name="name" required
-                   class="w-full px-4 py-3 rounded-xl font-body text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                   style="background: rgba(15,23,42,0.8); border: 1px solid rgba(255,255,255,0.1);"
-                   placeholder="John Smith">
-          </div>
-          <div>
-            <label class="block font-ui text-sm text-slate-400 mb-2">Email *</label>
-            <input type="email" name="email" required
-                   class="w-full px-4 py-3 rounded-xl font-body text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                   style="background: rgba(15,23,42,0.8); border: 1px solid rgba(255,255,255,0.1);"
-                   placeholder="john@company.com">
-          </div>
-        </div>
-        
-        <div class="grid md:grid-cols-2 gap-6">
-          <div>
-            <label class="block font-ui text-sm text-slate-400 mb-2">Phone</label>
-            <input type="tel" name="phone"
-                   class="w-full px-4 py-3 rounded-xl font-body text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                   style="background: rgba(15,23,42,0.8); border: 1px solid rgba(255,255,255,0.1);"
-                   placeholder="(555) 123-4567">
-          </div>
-          <div>
-            <label class="block font-ui text-sm text-slate-400 mb-2">Preferred Contact Method</label>
-            <select name="preferred_contact"
-                    class="w-full px-4 py-3 rounded-xl font-body text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    style="background: rgba(15,23,42,0.8); border: 1px solid rgba(255,255,255,0.1);">
-              <option value="either" class="bg-slate-900">Either</option>
-              <option value="email" class="bg-slate-900">Email</option>
-              <option value="phone" class="bg-slate-900">Phone</option>
-            </select>
-          </div>
-        </div>
-        
-        <div class="grid md:grid-cols-2 gap-6">
-          <div>
-            <label class="block font-ui text-sm text-slate-400 mb-2">Group Size *</label>
-            <select name="group_size" required
-                    class="w-full px-4 py-3 rounded-xl font-body text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    style="background: rgba(15,23,42,0.8); border: 1px solid rgba(255,255,255,0.1);">
-              <option value="" class="bg-slate-900">Select size</option>
-              <option value="5-10" class="bg-slate-900">5-10 people</option>
-              <option value="11-20" class="bg-slate-900">11-20 people</option>
-              <option value="21-30" class="bg-slate-900">21-30 people</option>
-              <option value="30+" class="bg-slate-900">30+ (let's talk!)</option>
-            </select>
-          </div>
-          <div>
-            <label class="block font-ui text-sm text-slate-400 mb-2">Event Type</label>
-            <select name="event_type"
-                    class="w-full px-4 py-3 rounded-xl font-body text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    style="background: rgba(15,23,42,0.8); border: 1px solid rgba(255,255,255,0.1);">
-              <option value="" class="bg-slate-900">Select type</option>
-              <option value="corporate" class="bg-slate-900">Corporate / Team Building</option>
-              <option value="birthday" class="bg-slate-900">Birthday Party</option>
-              <option value="bachelor" class="bg-slate-900">Bachelor / Bachelorette</option>
-              <option value="reunion" class="bg-slate-900">Family / Class Reunion</option>
-              <option value="school" class="bg-slate-900">School / Youth Group</option>
-              <option value="other" class="bg-slate-900">Other</option>
-            </select>
-          </div>
-        </div>
-        
-        <div>
-          <label class="block font-ui text-sm text-slate-400 mb-2">Preferred Date</label>
-          <input type="date" name="preferred_date"
-                 class="w-full px-4 py-3 rounded-xl font-body text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-                 style="background: rgba(15,23,42,0.8); border: 1px solid rgba(255,255,255,0.1);">
-        </div>
-        
-        <div>
-          <label class="block font-ui text-sm text-slate-400 mb-2">Tell Us More</label>
-          <textarea name="message" rows="4"
-                    class="w-full px-4 py-3 rounded-xl font-body text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
-                    style="background: rgba(15,23,42,0.8); border: 1px solid rgba(255,255,255,0.1);"
-                    placeholder="Any special requests, questions, or details about your event..."></textarea>
-        </div>
-        
-        <button type="submit" 
-                class="w-full py-4 rounded-xl font-display text-2xl tracking-wider transition-all hover:scale-105 text-white"
-                style="background: linear-gradient(90deg, #3684bf, #00a0e2); box-shadow: 0 0 30px rgba(0,160,226,0.3);">
-          <i class="fas fa-paper-plane mr-3"></i>SEND INQUIRY
-        </button>
-      </form>
-      
-      <!-- Or Contact Directly -->
-      <div class="mt-10 text-center">
-        <p class="font-body text-slate-500 mb-4">Or reach out directly:</p>
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a href="tel:7177695397" class="flex items-center gap-2 px-6 py-3 rounded-xl font-body transition-all hover:scale-105"
-             style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white;">
-            <i class="fas fa-phone text-brand-blue"></i> (717) 769-5397
-          </a>
-          <a href="mailto:info@escapegettysburg.com" class="flex items-center gap-2 px-6 py-3 rounded-xl font-body transition-all hover:scale-105"
-             style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: white;">
-            <i class="fas fa-envelope text-brand-blue"></i> info@escapegettysburg.com
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
+  </main>
 
   <!-- Footer -->
   <footer class="py-8 px-6 border-t border-white/10" style="background: #0A0A0B;">
@@ -356,20 +157,30 @@
     </div>
   </footer>
 
-  <!-- Success Detection Script -->
+  <!-- Off The Couch Waiver Widget -->
   <script>
-    // Check if redirected from form submission
-    if (window.location.search.includes('success=true')) {
-      // Show success message
-      document.getElementById('successMessage').classList.remove('hidden');
-      
-      // Scroll to the form section
-      document.getElementById('inquiry').scrollIntoView({ behavior: 'smooth' });
-      
-      // Clean up URL without refreshing
-      window.history.replaceState({}, document.title, window.location.pathname);
+    let f = document.createElement('iframe');
+    f.src = 'https://offthecouch.io/checkin/escapegettysburg';
+    f.width = '100%';
+    f.style.border = 'none';
+    f.style.minHeight = '300px';
+    window.addEventListener('message', e => {
+      if (e.origin === 'https://offthecouch.io') f.style.height = e.data.height + 'px';
+    });
+    document.getElementById('otcContainer').appendChild(f);
+  </script>
+  <!-- Mobile Menu Script -->
+  <script>
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (mobileMenuBtn && mobileMenu) {
+      let menuOpen = false;
+      mobileMenuBtn.addEventListener('click', () => {
+        menuOpen = !menuOpen;
+        mobileMenu.classList.toggle('hidden');
+        mobileMenuBtn.innerHTML = menuOpen ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+      });
     }
   </script>
-
 </body>
 </html>

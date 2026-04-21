@@ -86,19 +86,43 @@
       <div class="hidden md:flex items-center gap-8">
         <a href="index.html#rooms" class="font-body text-sm text-slate-300 hover:text-white transition-colors">Our Rooms</a>
         <a href="index.html#about" class="font-body text-sm text-slate-300 hover:text-white transition-colors">How It Works</a>
+        <a href="private-events.html" class="font-body text-sm text-slate-300 hover:text-white transition-colors">Private Events</a>
+        <a href="faq.html" class="font-body text-sm text-slate-300 hover:text-white transition-colors">FAQ</a>
+        <a href="gift-vouchers.html" class="font-body text-sm text-slate-300 hover:text-white transition-colors">Gift Vouchers</a>
         <a href="index.html#contact" class="font-body text-sm text-slate-300 hover:text-white transition-colors">Contact</a>
         <a href="tel:7177695397" class="font-body text-sm text-brand-blue hover:text-white transition-colors flex items-center gap-2">
           <i class="fas fa-phone"></i> (717) 769-5397
         </a>
-        <a href="https://offthecouch.io/book/escapegettysburg" target="_blank" rel="noopener noreferrer" class="px-6 py-2.5 rounded-xl font-display text-lg tracking-wide transition-all hover:scale-105 text-white"
-                style="background: linear-gradient(90deg, #3684bf, #00a0e2); box-shadow: 0 0 20px rgba(0,160,226,0.3);">
+        <a href="https://offthecouch.io/book/escapegettysburg" target="_blank" rel="noopener noreferrer"
+           class="px-6 py-2.5 rounded-xl font-display text-lg tracking-wide transition-all hover:scale-105 text-white"
+           style="background: linear-gradient(90deg, #3684bf, #00a0e2); box-shadow: 0 0 20px rgba(0,160,226,0.3);">
           BOOK NOW
         </a>
       </div>
 
-      <a href="index.html" class="md:hidden text-white text-sm flex items-center gap-2">
-        <i class="fas fa-arrow-left"></i> Back
-      </a>
+      <button id="mobileMenuBtn" class="md:hidden text-white text-2xl">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden md:hidden absolute top-full left-0 right-0 p-6" style="background: rgba(10,10,11,0.98);">
+      <div class="flex flex-col gap-4">
+        <a href="index.html#rooms" class="font-body text-lg text-white py-2">Our Rooms</a>
+        <a href="index.html#about" class="font-body text-lg text-white py-2">How It Works</a>
+        <a href="private-events.html" class="font-body text-lg text-white py-2">Private Events</a>
+        <a href="faq.html" class="font-body text-lg text-white py-2">FAQ</a>
+        <a href="gift-vouchers.html" class="font-body text-lg text-white py-2">Gift Vouchers</a>
+        <a href="index.html#contact" class="font-body text-lg text-white py-2">Contact</a>
+        <a href="tel:7177695397" class="font-body text-lg text-brand-blue py-2">
+          <i class="fas fa-phone mr-2"></i>(717) 769-5397
+        </a>
+        <a href="https://offthecouch.io/book/escapegettysburg" target="_blank" rel="noopener noreferrer"
+           class="w-full py-4 rounded-xl font-display text-xl tracking-wide mt-2 text-white text-center block"
+           style="background: linear-gradient(90deg, #3684bf, #00a0e2);">
+          BOOK NOW
+        </a>
+      </div>
     </div>
   </nav>
 
@@ -368,6 +392,19 @@
         firstFAQ.classList.add('active');
       }
     });
+  </script>
+  <!-- Mobile Menu Script -->
+  <script>
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    if (mobileMenuBtn && mobileMenu) {
+      let menuOpen = false;
+      mobileMenuBtn.addEventListener('click', () => {
+        menuOpen = !menuOpen;
+        mobileMenu.classList.toggle('hidden');
+        mobileMenuBtn.innerHTML = menuOpen ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+      });
+    }
   </script>
 </body>
 </html>
