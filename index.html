@@ -895,7 +895,7 @@
         const bookBtn = card.querySelector('.book-btn');
         
         if (isActive) {
-          card.style.transform = 'translateX(0) scale(1)';
+          card.style.transform = 'translateX(0) scale(1.05)';
           card.style.opacity = '1';
           card.style.zIndex = '10';
           card.style.filter = 'brightness(1)';
@@ -905,19 +905,19 @@
           bookBtn.classList.remove('hidden');
           bookBtn.classList.add('inline-block');
         } else if (isLeft) {
-          card.style.transform = 'translateX(-70%) scale(0.8)';
-          card.style.opacity = '0.5';
+          card.style.transform = 'translateX(-75%) scale(0.7)';
+          card.style.opacity = '0.4';
           card.style.zIndex = '5';
-          card.style.filter = 'brightness(0.4)';
+          card.style.filter = 'brightness(0.35)';
           inner.style.boxShadow = '0 20px 40px rgba(0,0,0,0.5)';
           inner.style.border = '3px solid rgba(0,0,0,0.6)';
           inner.style.outline = 'none';
           bookBtn.classList.add('hidden');
         } else if (isRight) {
-          card.style.transform = 'translateX(70%) scale(0.8)';
-          card.style.opacity = '0.5';
+          card.style.transform = 'translateX(75%) scale(0.7)';
+          card.style.opacity = '0.4';
           card.style.zIndex = '5';
-          card.style.filter = 'brightness(0.4)';
+          card.style.filter = 'brightness(0.35)';
           inner.style.boxShadow = '0 20px 40px rgba(0,0,0,0.5)';
           inner.style.border = '3px solid rgba(0,0,0,0.6)';
           inner.style.outline = 'none';
