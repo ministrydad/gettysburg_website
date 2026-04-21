@@ -316,8 +316,12 @@
         </p>
       </div>
 
-      <!-- Carousel -->
-      <div class="relative h-[500px] md:h-[520px] flex items-center justify-center mb-8 overflow-hidden">
+      <!-- ============================================== -->
+      <!-- DESKTOP / TABLET: Interactive carousel           -->
+      <!-- ============================================== -->
+      <div class="hidden md:block">
+        <!-- Carousel -->
+        <div class="relative h-[500px] md:h-[520px] flex items-center justify-center mb-8 overflow-hidden">
         
         <!-- Room Card 1: Heist -->
         <article class="carousel-card absolute w-[85%] max-w-2xl cursor-pointer transition-all duration-500 ease-out" data-index="0">
@@ -512,6 +516,73 @@
         <button class="carousel-dot h-2 w-2 rounded-full bg-slate-600 hover:bg-slate-500 transition-all" data-index="2"></button>
         <button class="carousel-dot h-2 w-10 rounded-full bg-brand-blue transition-all" data-index="3"></button>
       </div>
+      </div>
+      <!-- END DESKTOP CAROUSEL -->
+
+      <!-- ============================================== -->
+      <!-- MOBILE: Simple stacked cards (teaser only)      -->
+      <!-- ============================================== -->
+      <div class="md:hidden space-y-4">
+
+        <!-- Mobile Card 1: The Final Hour (first on mobile — new room) -->
+        <div class="relative rounded-2xl overflow-hidden aspect-[3/2]" style="box-shadow: 0 10px 30px rgba(0,0,0,0.5), 0 0 0 2px rgba(0,160,226,0.7), 0 0 25px rgba(0,160,226,0.35);">
+          <img src="/images/finalhour.png" alt="The Final Hour: Cold War Bunker Escape Room" class="absolute inset-0 w-full h-full object-cover">
+          <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.1) 100%);"></div>
+          <div class="absolute top-3 right-3 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full" style="background: rgba(0,160,226,0.25); border: 1px solid rgba(0,160,226,0.7); backdrop-filter: blur(10px);">
+            <span class="w-1.5 h-1.5 rounded-full animate-pulse" style="background: #00a0e2; box-shadow: 0 0 6px #00a0e2;"></span>
+            <span class="font-ui text-[10px] tracking-widest text-brand-blue">COMING SOON</span>
+          </div>
+          <div class="absolute bottom-0 left-0 right-0 p-4 z-10">
+            <h3 class="font-display text-2xl tracking-wide text-white drop-shadow-lg">
+              THE FINAL HOUR: COLD WAR BUNKER
+            </h3>
+          </div>
+        </div>
+
+        <!-- Mobile Card 2: Heist -->
+        <a href="https://offthecouch.io/book/escapegettysburg" target="_blank" rel="noopener noreferrer" class="block relative rounded-2xl overflow-hidden aspect-[3/2]" style="box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+          <img src="/images/heist.png" alt="Heist of the Gettysburg Address Escape Room" class="absolute inset-0 w-full h-full object-cover">
+          <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.1) 100%);"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-4 z-10">
+            <h3 class="font-display text-2xl tracking-wide text-white drop-shadow-lg">
+              HEIST OF THE GETTYSBURG ADDRESS
+            </h3>
+          </div>
+        </a>
+
+        <!-- Mobile Card 3: Mad Hatter -->
+        <a href="https://offthecouch.io/book/escapegettysburg" target="_blank" rel="noopener noreferrer" class="block relative rounded-2xl overflow-hidden aspect-[3/2]" style="box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+          <img src="/images/madhatter.png" alt="The Mad Hatter Escape Room" class="absolute inset-0 w-full h-full object-cover">
+          <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.1) 100%);"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-4 z-10">
+            <h3 class="font-display text-2xl tracking-wide text-white drop-shadow-lg">
+              THE MAD HATTER
+            </h3>
+          </div>
+        </a>
+
+        <!-- Mobile Card 4: Houdini -->
+        <a href="https://offthecouch.io/book/escapegettysburg" target="_blank" rel="noopener noreferrer" class="block relative rounded-2xl overflow-hidden aspect-[3/2]" style="box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+          <img src="/images/houdini.png" alt="Houdini's Workshop Escape Room" class="absolute inset-0 w-full h-full object-cover">
+          <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.3) 50%, rgba(0,0,0,0.1) 100%);"></div>
+          <div class="absolute bottom-0 left-0 right-0 p-4 z-10">
+            <h3 class="font-display text-2xl tracking-wide text-white drop-shadow-lg">
+              HOUDINI'S WORKSHOP
+            </h3>
+          </div>
+        </a>
+
+        <!-- Mobile CTA below the cards -->
+        <div class="pt-4 text-center">
+          <a href="https://offthecouch.io/book/escapegettysburg" target="_blank" rel="noopener noreferrer"
+             class="inline-block px-8 py-4 rounded-xl font-display text-xl tracking-wider text-white"
+             style="background: linear-gradient(90deg, #3684bf, #00a0e2); box-shadow: 0 0 20px rgba(0,160,226,0.3);">
+            <i class="fas fa-calendar-alt mr-2"></i>BOOK YOUR ESCAPE
+          </a>
+        </div>
+
+      </div>
+      <!-- END MOBILE CARDS -->
     </div>
   </section>
 
