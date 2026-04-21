@@ -507,10 +507,10 @@
 
       <!-- Dots -->
       <div class="flex justify-center gap-3">
-        <button class="carousel-dot h-2 w-10 rounded-full bg-brand-blue transition-all" data-index="0"></button>
+        <button class="carousel-dot h-2 w-2 rounded-full bg-slate-600 hover:bg-slate-500 transition-all" data-index="0"></button>
         <button class="carousel-dot h-2 w-2 rounded-full bg-slate-600 hover:bg-slate-500 transition-all" data-index="1"></button>
         <button class="carousel-dot h-2 w-2 rounded-full bg-slate-600 hover:bg-slate-500 transition-all" data-index="2"></button>
-        <button class="carousel-dot h-2 w-2 rounded-full bg-slate-600 hover:bg-slate-500 transition-all" data-index="3"></button>
+        <button class="carousel-dot h-2 w-10 rounded-full bg-brand-blue transition-all" data-index="3"></button>
       </div>
     </div>
   </section>
@@ -881,7 +881,7 @@
     const dots = document.querySelectorAll('.carousel-dot');
     const prevBtn = document.getElementById('prevBtn');
     const nextBtn = document.getElementById('nextBtn');
-    let currentIndex = 0;
+    let currentIndex = 3;
     let autoPlayInterval;
 
     function updateCarousel() {
@@ -899,7 +899,7 @@
           card.style.opacity = '1';
           card.style.zIndex = '10';
           card.style.filter = 'brightness(1)';
-          inner.style.boxShadow = '0 20px 40px rgba(0,0,0,0.5)';
+          inner.style.boxShadow = '0 20px 40px rgba(0,0,0,0.5), 0 0 0 1px rgba(0,160,226,0.6), 0 0 20px rgba(0,160,226,0.25)';
           inner.style.border = '3px solid rgba(0,0,0,0.6)';
           inner.style.outline = 'none';
           bookBtn.classList.remove('hidden');
